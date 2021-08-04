@@ -32,3 +32,10 @@ The config files contain the following information:
   - Network Element IP Address
   - Network Element Interface In/Out Name & IP
   - Network Element SNMP Exporter OIDs
+
+## Supporting Files
+In order for the Python script to run, it utilizes a set of templating files as supporting files. Ensure that the following files are within the same directory of ```dynamic.py``` when running the script:
+  - ```generator.yml```
+  - ```generatorTemplate.yml```
+  - ```template.json```
+  - ```templateTwo.json```

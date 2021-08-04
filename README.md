@@ -6,6 +6,7 @@ The custom script has the following functionalities:
 - Modifying the layout of the Grafana dashboard dynamically for multiple network elements
 - Displaying flow-specific end-to-end information based on the config file information
 - Dynamically constructing an SNMP Exporter config file to poll fine-grained OIDs from specific interfaces as specified in the config file
+- Automatically loading JSON files to Grafana via Dashboard HTTP API
 
 ## Python Script
 The script that performs the dynamic dashboard generation is ```dynamic.py```. The python script takes in one argument via the command line of a config file containing the necessary details for dashboard generation. 
@@ -13,7 +14,7 @@ The script that performs the dynamic dashboard generation is ```dynamic.py```. T
 **Usage:** ```python dynamic.py <config_file>```
 
 The output of the Python script is two files: 
-- The Grafana Dashboard in JSON format (as of now, must be manually loaded into Grafana via the Import option): ```out.json```
+- The Grafana Dashboard in JSON format (the script automatically also loads this into the Grafana server, but we provide the raw JSON as well): ```out.json```
 - The Custom SNMP Config File which polls only the specific OIDs of the specific interfaces of the network elements described in the config file (as of now, must be manually loaded into the SNMP Exporter systemd service): ```snmp.yml```
 
 
@@ -39,3 +40,4 @@ In order for the Python script to run, it utilizes a set of templating files as 
   - ```generatorTemplate.yml```
   - ```template.json```
   - ```templateTwo.json```
+  - ```api.py```

@@ -1,4 +1,11 @@
 {
+"dashboard": {
+    "id": null,
+    "uid": null,
+    "title": "Top Flow Dashboard",
+    "tags": [ "templated" ],
+    "timezone": "browser",
+    "schemaVersion": 16,
   "annotations": {
     "list": [
       {
@@ -16,8 +23,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 24,
-  "iteration": 1626904932930,
+  "id": 14,
+  "iteration": 1625717090031,
   "links": [
     {
       "asDropdown": false,
@@ -53,7 +60,7 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 6,
+        "w": 8,
         "x": 0,
         "y": 0
       },
@@ -77,8 +84,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 6,
-        "x": 6,
+        "w": 8,
+        "x": 8,
         "y": 0
       },
       "id": 13,
@@ -89,7 +96,7 @@
       "pluginVersion": "7.5.4",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Network Element (Switch 1)",
+      "title": "Network Element (Switch)",
       "transparent": true,
       "type": "text"
     },
@@ -101,32 +108,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 6,
-        "x": 12,
-        "y": 0
-      },
-      "id": 116,
-      "options": {
-        "content": " Dell S4810 Switch",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Network Element (Switch 2)",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 6,
-        "x": 18,
+        "w": 8,
+        "x": 16,
         "y": 0
       },
       "id": 14,
@@ -164,7 +147,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
+        "w": 8,
         "x": 0,
         "y": 2
       },
@@ -198,8 +181,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
-        "x": 6,
+        "w": 8,
+        "x": 8,
         "y": 2
       },
       "id": 15,
@@ -232,42 +215,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
-        "x": 12,
-        "y": 2
-      },
-      "id": 117,
-      "options": {
-        "content": "<center> 172.16.1.14 </center>",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 6,
-        "x": 18,
+        "w": 8,
+        "x": 16,
         "y": 2
       },
       "id": 16,
@@ -301,8 +250,8 @@
       },
       "fontSize": "100%",
       "gridPos": {
-        "h": 5,
-        "w": 12,
+        "h": 4,
+        "w": 24,
         "x": 0,
         "y": 4
       },
@@ -710,7 +659,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum(ifIndex{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex)",
+          "expr": "sum(ifIndex{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -721,7 +670,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifName{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex,ifName)",
+          "expr": "sum(ifName{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex,ifName)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -732,7 +681,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifType_info{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex,ifType)",
+          "expr": "sum(ifType_info{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex,ifType)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -743,7 +692,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifPhysAddress{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex,ifPhysAddress)",
+          "expr": "sum(ifPhysAddress{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex,ifPhysAddress)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -754,7 +703,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifMtu{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex)",
+          "expr": "sum(ifMtu{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -765,7 +714,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049604|1054084\"}) by (ifIndex)",
+          "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1054340|1054468\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -777,498 +726,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Interface Status",
-      "transform": "table",
-      "transparent": true,
-      "type": "table-old"
-    },
-    {
-      "columns": [],
-      "datasource": null,
-      "description": "Switch Interfaces, MAC Address, MTU, and Operational State",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 5,
-        "w": 12,
-        "x": 12,
-        "y": 4
-      },
-      "id": 118,
-      "links": [],
-      "pageSize": null,
-      "scroll": true,
-      "showHeader": true,
-      "sort": {
-        "col": 3,
-        "desc": true
-      },
-      "styles": [
-        {
-          "$$hashKey": "object:7776",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Time",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7777",
-          "alias": "Last Status Change",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "MMMM D, YYYY LT",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #A",
-          "thresholds": [],
-          "type": "date",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7778",
-          "alias": "Admin Status",
-          "align": "auto",
-          "colorMode": "value",
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value #B",
-          "thresholds": [
-            "2",
-            "2"
-          ],
-          "type": "string",
-          "unit": "none",
-          "valueMaps": [
-            {
-              "$$hashKey": "object:7885",
-              "text": "enabled",
-              "value": "1"
-            },
-            {
-              "$$hashKey": "object:7886",
-              "text": "disabled",
-              "value": "2"
-            }
-          ]
-        },
-        {
-          "$$hashKey": "object:7779",
-          "alias": "Operational State",
-          "align": "auto",
-          "colorMode": "value",
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value #D",
-          "thresholds": [
-            "2",
-            "2"
-          ],
-          "type": "string",
-          "unit": "none",
-          "valueMaps": [
-            {
-              "$$hashKey": "object:7909",
-              "text": "up",
-              "value": "1"
-            },
-            {
-              "$$hashKey": "object:7910",
-              "text": "down",
-              "value": "2"
-            }
-          ]
-        },
-        {
-          "$$hashKey": "object:7780",
-          "alias": "Interface",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "ifIndex",
-          "thresholds": [],
-          "type": "number",
-          "unit": "none"
-        },
-        {
-          "$$hashKey": "object:7781",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #C",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7782",
-          "alias": "MTU",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value #E",
-          "thresholds": [],
-          "type": "number",
-          "unit": "none"
-        },
-        {
-          "$$hashKey": "object:7783",
-          "alias": "Speed",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #F",
-          "thresholds": [],
-          "type": "number",
-          "unit": "bps"
-        },
-        {
-          "$$hashKey": "object:7784",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #G",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7785",
-          "alias": "Physical Address",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifPhysAddress",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7786",
-          "alias": "Type",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifType",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7787",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #H",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7788",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #I",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7789",
-          "alias": "Name",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifName",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7790",
-          "alias": "Alias",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifAlias",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7791",
-          "alias": "Description",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifDescr",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7792",
-          "alias": "Sent",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #J",
-          "thresholds": [],
-          "type": "number",
-          "unit": "bytes"
-        },
-        {
-          "$$hashKey": "object:7793",
-          "alias": "Received",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #K",
-          "thresholds": [],
-          "type": "number",
-          "unit": "bytes"
-        },
-        {
-          "$$hashKey": "object:7794",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #L",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "$$hashKey": "object:7795",
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #M",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        }
-      ],
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "sum(ifIndex{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "M"
-        },
-        {
-          "exemplar": true,
-          "expr": "sum(ifName{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex,ifName)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "I"
-        },
-        {
-          "exemplar": true,
-          "expr": "sum(ifType_info{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex,ifType)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "G"
-        },
-        {
-          "exemplar": true,
-          "expr": "sum(ifPhysAddress{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex,ifPhysAddress)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "C"
-        },
-        {
-          "exemplar": true,
-          "expr": "sum(ifMtu{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "E"
-        },
-        {
-          "exemplar": true,
-          "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"172.16.1.14\",ifIndex=~\"1049732|1053956\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "D"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Switch 2 Interface Status",
+      "title": "Switch Interface Status",
       "transform": "table",
       "transparent": true,
       "type": "table-old"
@@ -1307,10 +765,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 3,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 8
       },
       "id": 23,
       "links": [],
@@ -1327,7 +785,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_network_info{instance=\"198.32.43.16:9100\",job=\"$Job\",device=~\"ens2d1.1001\"}",
+          "expr": "node_network_info{instance=\"198.32.43.16:9100\",job=\"$Job\",device=~\"ens2.1000\"}",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -1338,7 +796,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_network_mtu_bytes{instance=\"198.32.43.16:9100\",job=\"$Job\",device=\"ens2d1.1001\"}",
+          "expr": "node_network_mtu_bytes{instance=\"198.32.43.16:9100\",job=\"$Job\",device=\"ens2.1000\"}",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1437,10 +895,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 3,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 8
       },
       "id": 115,
       "links": [],
@@ -1457,7 +915,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_network_info{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}",
+          "expr": "node_network_info{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -1468,7 +926,7 @@
         },
         {
           "exemplar": true,
-          "expr": "node_network_mtu_bytes{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}",
+          "expr": "node_network_mtu_bytes{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1574,9 +1032,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
+        "w": 8,
         "x": 0,
-        "y": 13
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 26,
@@ -1620,7 +1078,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=~\"ens2d1.1001\"}[5m])*8",
+          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=~\"ens2.1000\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1714,9 +1172,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 6,
-        "y": 13
+        "w": 8,
+        "x": 8,
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 28,
@@ -1760,7 +1218,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}[5m])*8",
+          "expr": "irate(ifHCInOctets{job=\"$job\", ifIndex=~\"1054340|1054468\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1773,148 +1231,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "decimals": null,
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 6,
-        "x": 12,
-        "y": 13
-      },
-      "hiddenSeries": false,
-      "id": 119,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Bandwidth In",
+      "title": "Switch Bandwidth In",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1996,9 +1313,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 18,
-        "y": 13
+        "w": 8,
+        "x": 16,
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 30,
@@ -2042,7 +1359,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[5m])*8",
+          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2136,9 +1453,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
+        "w": 8,
         "x": 0,
-        "y": 24
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 29,
@@ -2182,7 +1499,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\",device=\"ens2d1.1001\"}[5m])*8",
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\",device=\"ens2.1000\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2276,9 +1593,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 6,
-        "y": 24
+        "w": 8,
+        "x": 8,
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 32,
@@ -2322,7 +1639,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}[5m])*8",
+          "expr": "irate(ifHCOutOctets{job=\"$job\",ifIndex=~\"1054340|1054468\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2335,7 +1652,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Bandwidth Out",
+      "title": "Switch Bandwidth Out",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2416,149 +1733,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 12,
-        "y": 24
-      },
-      "hiddenSeries": false,
-      "id": 120,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 6,
-        "x": 18,
-        "y": 24
+        "w": 8,
+        "x": 16,
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 31,
@@ -2602,7 +1779,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[5m])*8",
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}[5m])*8",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2694,9 +1871,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
+        "w": 8,
         "x": 0,
-        "y": 35
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 35,
@@ -2740,7 +1917,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[10m])",
+          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2.1000\"}[10m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2832,9 +2009,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 6,
-        "y": 35
+        "w": 8,
+        "x": 8,
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 33,
@@ -2872,7 +2049,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "rate(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}[10m])",
+          "expr": "rate(ifHCInOctets{job=\"$job\", ifIndex=~\"1054340|1054468\"}[10m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2885,7 +2062,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Octets In",
+      "title": "Switch Octets In",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2964,141 +2141,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 12,
-        "y": 35
-      },
-      "hiddenSeries": false,
-      "id": 121,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "rate(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 6,
-        "x": 18,
-        "y": 35
+        "w": 8,
+        "x": 16,
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 36,
@@ -3142,7 +2187,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[10m])",
+          "expr": "irate(node_network_receive_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}[10m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3234,9 +2279,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
+        "w": 8,
         "x": 0,
-        "y": 46
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 37,
@@ -3280,7 +2325,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.16:9100\", device=\"ens2d1.1001\",job=\"$Job\"}[10m])",
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.16:9100\", device=\"ens2.1000\",job=\"$Job\"}[10m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3371,10 +2416,10 @@
       "fill": 4,
       "fillGradient": 0,
       "gridPos": {
-        "h": 10,
-        "w": 6,
-        "x": 6,
-        "y": 46
+        "h": 11,
+        "w": 8,
+        "x": 8,
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 34,
@@ -3418,7 +2463,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}[15m])",
+          "expr": "irate(ifHCOutOctets{job=\"$job\", ifIndex=~\"1054340|1054468\"}[15m])",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -3432,146 +2477,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Octets Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 10,
-        "w": 6,
-        "x": 12,
-        "y": 46
-      },
-      "hiddenSeries": false,
-      "id": 122,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}[15m])",
-          "format": "time_series",
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Octets Out",
+      "title": "Switch Octets Out",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -3650,9 +2556,9 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 11,
-        "w": 6,
-        "x": 18,
-        "y": 46
+        "w": 8,
+        "x": 16,
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 38,
@@ -3696,7 +2602,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[10m])",
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}[10m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3756,7 +2662,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 57
+        "y": 55
       },
       "id": 6,
       "panels": [],
@@ -3783,7 +2689,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 58
+        "y": 56
       },
       "height": "",
       "hiddenSeries": false,
@@ -3917,7 +2823,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 58
+        "y": 56
       },
       "height": "",
       "hiddenSeries": false,
@@ -4050,7 +2956,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 68
+        "y": 66
       },
       "height": "",
       "hiddenSeries": false,
@@ -4198,7 +3104,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 68
+        "y": 66
       },
       "height": "",
       "hiddenSeries": false,
@@ -4345,7 +3251,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 78
+        "y": 76
       },
       "height": "",
       "hiddenSeries": false,
@@ -4473,7 +3379,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 78
+        "y": 76
       },
       "height": "",
       "hiddenSeries": false,
@@ -4602,7 +3508,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 88
+        "y": 86
       },
       "height": "",
       "hiddenSeries": false,
@@ -4743,7 +3649,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 88
+        "y": 86
       },
       "height": "",
       "hiddenSeries": false,
@@ -4883,7 +3789,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 98
+        "y": 96
       },
       "height": "",
       "hiddenSeries": false,
@@ -5002,7 +3908,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 98
+        "y": 96
       },
       "height": "",
       "hiddenSeries": false,
@@ -5121,7 +4027,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 108
+        "y": 106
       },
       "hiddenSeries": false,
       "id": 46,
@@ -5155,7 +4061,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_arp_entries{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2d1.1001\"}",
+          "expr": "node_arp_entries{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2.1000\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5226,7 +4132,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 108
+        "y": 106
       },
       "hiddenSeries": false,
       "id": 47,
@@ -5260,7 +4166,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_arp_entries{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}",
+          "expr": "node_arp_entries{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5331,7 +4237,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 118
+        "y": 116
       },
       "hiddenSeries": false,
       "id": 49,
@@ -5386,7 +4292,7 @@
         },
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_errs_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[5m])",
+          "expr": "irate(node_network_transmit_errs_total{instance=\"198.32.43.16:9100\",job=\"$Job\", device=\"ens2.1000\"}[5m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5457,7 +4363,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 118
+        "y": 116
       },
       "hiddenSeries": false,
       "id": 50,
@@ -5512,7 +4418,7 @@
         },
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_errs_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2d1.1001\"}[5m])",
+          "expr": "irate(node_network_transmit_errs_total{instance=\"198.32.43.15:9100\",job=\"$Job\", device=\"ens2.1000\"}[5m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5572,7 +4478,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 128
+        "y": 126
       },
       "id": 8,
       "panels": [],
@@ -5624,7 +4530,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 129
+        "y": 127
       },
       "id": 52,
       "links": [],
@@ -5703,7 +4609,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 129
+        "y": 127
       },
       "id": 55,
       "links": [],
@@ -5782,7 +4688,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 129
+        "y": 127
       },
       "id": 53,
       "links": [],
@@ -5861,7 +4767,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 129
+        "y": 127
       },
       "id": 56,
       "links": [],
@@ -5933,7 +4839,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 133
+        "y": 131
       },
       "hideTimeOverride": false,
       "id": 58,
@@ -6025,7 +4931,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 133
+        "y": 131
       },
       "id": 60,
       "links": [],
@@ -6096,7 +5002,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 133
+        "y": 131
       },
       "hideTimeOverride": false,
       "id": 62,
@@ -6188,7 +5094,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 133
+        "y": 131
       },
       "id": 61,
       "links": [],
@@ -6256,7 +5162,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 137
+        "y": 135
       },
       "hiddenSeries": false,
       "id": 64,
@@ -6460,7 +5366,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 137
+        "y": 135
       },
       "hiddenSeries": false,
       "id": 65,
@@ -6669,7 +5575,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 144
+        "y": 142
       },
       "hiddenSeries": false,
       "id": 68,
@@ -6865,7 +5771,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 144
+        "y": 142
       },
       "hiddenSeries": false,
       "id": 67,
@@ -7039,7 +5945,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 151
+        "y": 149
       },
       "hiddenSeries": false,
       "id": 70,
@@ -7160,7 +6066,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 151
+        "y": 149
       },
       "hiddenSeries": false,
       "id": 71,
@@ -7275,7 +6181,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 161
+        "y": 159
       },
       "hiddenSeries": false,
       "id": 73,
@@ -7435,7 +6341,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 161
+        "y": 159
       },
       "hiddenSeries": false,
       "id": 74,
@@ -7584,7 +6490,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 171
+        "y": 169
       },
       "id": 91,
       "panels": [],
@@ -7604,7 +6510,7 @@
       ],
       "datasource": "Prometheus",
       "decimals": 2,
-      "description": "",
+      "description": "Switch Dell S4810 Total In ",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -7621,7 +6527,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 172
+        "y": 170
       },
       "id": 108,
       "interval": null,
@@ -7663,7 +6569,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(delta(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\" }[$__range]))",
+          "expr": "max(delta(ifHCInOctets{job=\"$job\"}[$__range]))",
           "instant": false,
           "interval": "",
           "legendFormat": "In",
@@ -7673,7 +6579,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Total In",
+      "title": "Switch Total In",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -7699,7 +6605,7 @@
       ],
       "datasource": "Prometheus",
       "decimals": 2,
-      "description": "",
+      "description": "Switch Dell S4810 Total Out",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -7716,7 +6622,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 172
+        "y": 170
       },
       "id": 110,
       "interval": null,
@@ -7758,7 +6664,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(delta(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\"}[$__range]))",
+          "expr": "max(delta(ifHCOutOctets{job=\"$job\"}[$__range]))",
           "interval": "",
           "legendFormat": "Out",
           "refId": "A"
@@ -7767,7 +6673,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Total Out",
+      "title": "Switch Total Out",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -7793,7 +6699,7 @@
       ],
       "datasource": "Prometheus",
       "decimals": 2,
-      "description": "",
+      "description": "Switch Dell S4810 Max In (Current)",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -7810,7 +6716,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 172
+        "y": 170
       },
       "id": 112,
       "interval": null,
@@ -7852,7 +6758,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(irate(ifHCInOctets{job=\"$job\",  instance=\"172.16.1.14\"}[5m]))",
+          "expr": "max(irate(ifHCInOctets{job=\"$job\"}[5m]))",
           "interval": "",
           "legendFormat": "In",
           "refId": "A"
@@ -7861,7 +6767,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Max In (Current)",
+      "title": "Switch Max In (Current)",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -7887,7 +6793,7 @@
       ],
       "datasource": "Prometheus",
       "decimals": 2,
-      "description": "",
+      "description": "Switch Dell S4810 Max Out (Current)",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -7904,7 +6810,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 172
+        "y": 170
       },
       "id": 114,
       "interval": "",
@@ -7946,7 +6852,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(irate(ifHCOutOctets{instance=\"172.16.1.14\", job=\"$job\"}[5m]))",
+          "expr": "max(irate(ifHCOutOctets{job=\"$job\"}[5m]))",
           "instant": false,
           "interval": "",
           "legendFormat": "Out",
@@ -7956,7 +6862,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Max Out (Current)",
+      "title": "Switch Max Out (Current)",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -7975,7 +6881,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
-      "description": "",
+      "description": "Dell S4810 Switch Incoming VLAN Packets",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -7986,7 +6892,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 175
+        "y": 173
       },
       "hiddenSeries": false,
       "id": 85,
@@ -8017,7 +6923,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "f10IfInVlanPkts{instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}",
+          "expr": "f10IfInVlanPkts{ifIndex=~\"1054340|1054468\"}",
           "interval": "",
           "legendFormat": "{{ifDescr}}",
           "refId": "A"
@@ -8027,7 +6933,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Incoming VLAN Packets",
+      "title": "Switch Incoming VLAN Packets",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -8073,7 +6979,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
-      "description": "",
+      "description": "Dell S4810 Switch Outgoing VLAN Packets",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -8084,7 +6990,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 175
+        "y": 173
       },
       "hiddenSeries": false,
       "id": 87,
@@ -8115,7 +7021,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "f10IfOutVlanPkts{instance=\"172.16.1.14\", ifIndex=~\"1049604|1054084\"}",
+          "expr": "f10IfOutVlanPkts{ifIndex=~\"1054340|1054468\"}",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -8126,582 +7032,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 1 Outgoing VLAN Packets",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:745",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:746",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#1F60C4",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "decimals": 2,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "decbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 0,
-        "y": 183
-      },
-      "id": 123,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "max(delta(ifHCInOctets{job=\"$job\", instance=\"172.16.1.14\" }[$__range]))",
-          "instant": false,
-          "interval": "",
-          "legendFormat": "In",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Switch 2 Total In",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#56A64B",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "decimals": 2,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "decbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 6,
-        "y": 183
-      },
-      "id": 124,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "max(delta(ifHCOutOctets{job=\"$job\", instance=\"172.16.1.14\"}[$__range]))",
-          "interval": "",
-          "legendFormat": "Out",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Switch 2 Total Out",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#1F60C4",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "decimals": 2,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "Bps",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 12,
-        "y": 183
-      },
-      "id": 125,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "max(irate(ifHCInOctets{job=\"$job\",  instance=\"172.16.1.14\"}[5m]))",
-          "interval": "",
-          "legendFormat": "In",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Switch 2 Max In (Current)",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#56A64B",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "decimals": 2,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "Bps",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 18,
-        "y": 183
-      },
-      "id": 126,
-      "interval": "",
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "150%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "max(irate(ifHCOutOctets{instance=\"172.16.1.14\", job=\"$job\"}[5m]))",
-          "instant": false,
-          "interval": "",
-          "legendFormat": "Out",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Switch 2 Max Out (Current)",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 186
-      },
-      "hiddenSeries": false,
-      "id": 127,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "f10IfInVlanPkts{instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}",
-          "interval": "",
-          "legendFormat": "{{ifDescr}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Incoming VLAN Packets",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:745",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:746",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 186
-      },
-      "hiddenSeries": false,
-      "id": 128,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "f10IfOutVlanPkts{instance=\"172.16.1.14\", ifIndex=~\"1049732|1053956\"}",
-          "instant": false,
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Outgoing VLAN Packets",
+      "title": "Switch Outgoing VLAN Packets",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -8759,7 +7090,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 194
+        "y": 181
       },
       "height": "",
       "hiddenSeries": false,
@@ -8887,7 +7218,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 194
+        "y": 181
       },
       "height": "",
       "hiddenSeries": false,
@@ -9016,7 +7347,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 204
+        "y": 191
       },
       "height": "",
       "hiddenSeries": false,
@@ -9143,7 +7474,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 204
+        "y": 191
       },
       "height": "",
       "hiddenSeries": false,
@@ -9270,7 +7601,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 214
+        "y": 201
       },
       "height": "",
       "hiddenSeries": false,
@@ -9387,7 +7718,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 214
+        "y": 201
       },
       "height": "",
       "hiddenSeries": false,
@@ -9504,7 +7835,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 224
+        "y": 211
       },
       "height": "",
       "hiddenSeries": false,
@@ -9636,7 +7967,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 224
+        "y": 211
       },
       "height": "",
       "hiddenSeries": false,
@@ -9767,7 +8098,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 234
+        "y": 221
       },
       "height": "",
       "hiddenSeries": false,
@@ -9914,7 +8245,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 234
+        "y": 221
       },
       "height": "",
       "hiddenSeries": false,
@@ -10164,13 +8495,13 @@
           },
           {
             "selected": false,
-            "text": "1049732",
-            "value": "1049732"
+            "text": "1049604",
+            "value": "1049604"
           },
           {
             "selected": false,
-            "text": "1053956",
-            "value": "1053956"
+            "text": "1049732",
+            "value": "1049732"
           },
           {
             "selected": false,
@@ -10334,8 +8665,8 @@
           },
           {
             "selected": false,
-            "text": "1049604",
-            "value": "1049604"
+            "text": "1053956",
+            "value": "1053956"
           },
           {
             "selected": false,
@@ -10637,12 +8968,14 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Two",
-  "uid": "Two",
-  "version": 2
+  "title": "Top Flow Dashboard",
+  "uid": null,
+  "id": null,
+  "version": 6
+}
 }

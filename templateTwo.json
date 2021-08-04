@@ -1,4 +1,11 @@
 {
+"dashboard": {
+    "id": null,
+    "uid": null,
+    "title": "DASHTITLE",
+    "tags": [ "templated" ],
+    "timezone": "browser",
+    "schemaVersion": 16,
   "annotations": {
     "list": [
       {
@@ -10642,7 +10649,9 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Two",
-  "uid": "Two",
+  "title": "DASHTITLE",
+  "uid": null,
+  "id": null,
   "version": 2
+}
 }

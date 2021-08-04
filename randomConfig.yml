@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 1
+dashTitle: "Random Dashboard"
 # Host 1 Specifics 
 hostA:
   IP: 198.32.43.15

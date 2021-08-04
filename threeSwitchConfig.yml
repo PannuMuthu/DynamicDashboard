@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 3
+dashTitle: "Three Network Element Dashboard"
 # Host 1 Specifics 
 hostA:
   IP: 198.32.43.16

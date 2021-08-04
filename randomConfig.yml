@@ -1,0 +1,28 @@
+# Number of switches
+switchNum: 1
+# Host 1 Specifics 
+hostA:
+  IP: 198.32.43.15
+  interfaceName: 'enp4s0f0'
+  interfaceIP: '10.10.10.10'
+  vlan: 3601
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/34'
+    ifIndex: 1052932
+# Host 2 Specifics
+hostB:
+  IP: 198.32.43.16
+  interfaceName: 'enp4s0f1'
+  interfaceIP: '10.10.10.11'
+  vlan: 3602
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/33'
+    ifIndex: 1052804
+# Prometheus source specifics
+switchData:
+  job_name: 'snmp1'
+  target: 172.16.1.14
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]

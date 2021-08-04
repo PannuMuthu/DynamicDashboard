@@ -24,6 +24,8 @@ hostB:
 # Prometheus source specifics
 switchData:
   job_name: 'snmp1'
+  scrapeInterval: 20s
+  scrapeDuration: 2h
   target: 172.16.1.14
   # if-mib and F10-IF-EXTENSION-MIB
   params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]

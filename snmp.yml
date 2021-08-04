@@ -1,0 +1,2606 @@
+# WARNING: This file was auto-generated using snmp_exporter generator, manual changes will be lost.
+module_name:
+  walk:
+  - 1.3.6.1.2.1.2.2.1.2
+  - 1.3.6.1.2.1.31
+  - 1.3.6.1.4.1.6027.3.11
+  - 1.3.6.1.4.1.6027.3.16
+  metrics:
+  - name: ifName
+    oid: 1.3.6.1.2.1.31.1.1.1.1
+    type: DisplayString
+    help: The textual name of the interface - 1.3.6.1.2.1.31.1.1.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifInMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.2
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a multicast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifInBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.3
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a broadcast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifOutMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.4
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a multicast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.4
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifOutBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.5
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a broadcast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.5
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCInOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.6
+    type: counter
+    help: The total number of octets received on the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCInUcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.7
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were not addressed to a multicast or broadcast address at this sub-layer
+      - 1.3.6.1.2.1.31.1.1.1.7
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCInMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.8
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a multicast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.8
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCInBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.9
+    type: counter
+    help: The number of packets, delivered by this sub-layer to a higher (sub-)layer,
+      which were addressed to a broadcast address at this sub-layer - 1.3.6.1.2.1.31.1.1.1.9
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCOutOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.10
+    type: counter
+    help: The total number of octets transmitted out of the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.10
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCOutUcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.11
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were not addressed to a multicast or broadcast address at this sub-layer,
+      including those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.11
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCOutMulticastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.12
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a multicast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.12
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifHCOutBroadcastPkts
+    oid: 1.3.6.1.2.1.31.1.1.1.13
+    type: counter
+    help: The total number of packets that higher-level protocols requested be transmitted,
+      and which were addressed to a broadcast address at this sub-layer, including
+      those that were discarded or not sent - 1.3.6.1.2.1.31.1.1.1.13
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifLinkUpDownTrapEnable
+    oid: 1.3.6.1.2.1.31.1.1.1.14
+    type: gauge
+    help: Indicates whether linkUp/linkDown traps should be generated for this interface
+      - 1.3.6.1.2.1.31.1.1.1.14
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: enabled
+      2: disabled
+  - name: ifHighSpeed
+    oid: 1.3.6.1.2.1.31.1.1.1.15
+    type: gauge
+    help: An estimate of the interface's current bandwidth in units of 1,000,000 bits
+      per second - 1.3.6.1.2.1.31.1.1.1.15
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifPromiscuousMode
+    oid: 1.3.6.1.2.1.31.1.1.1.16
+    type: gauge
+    help: This object has a value of false(2) if this interface only accepts packets/frames
+      that are addressed to this station - 1.3.6.1.2.1.31.1.1.1.16
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: ifConnectorPresent
+    oid: 1.3.6.1.2.1.31.1.1.1.17
+    type: gauge
+    help: This object has the value 'true(1)' if the interface sublayer has a physical
+      connector and the value 'false(2)' otherwise. - 1.3.6.1.2.1.31.1.1.1.17
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: ifAlias
+    oid: 1.3.6.1.2.1.31.1.1.1.18
+    type: DisplayString
+    help: This object is an 'alias' name for the interface as specified by a network
+      manager, and provides a non-volatile 'handle' for the interface - 1.3.6.1.2.1.31.1.1.1.18
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifCounterDiscontinuityTime
+    oid: 1.3.6.1.2.1.31.1.1.1.19
+    type: gauge
+    help: The value of sysUpTime on the most recent occasion at which any one or more
+      of this interface's counters suffered a discontinuity - 1.3.6.1.2.1.31.1.1.1.19
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifStackHigherLayer
+    oid: 1.3.6.1.2.1.31.1.2.1.1
+    type: gauge
+    help: The value of ifIndex corresponding to the higher sub-layer of the relationship,
+      i.e., the sub-layer which runs on 'top' of the sub-layer identified by the corresponding
+      instance of ifStackLowerLayer - 1.3.6.1.2.1.31.1.2.1.1
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+  - name: ifStackLowerLayer
+    oid: 1.3.6.1.2.1.31.1.2.1.2
+    type: gauge
+    help: The value of ifIndex corresponding to the lower sub-layer of the relationship,
+      i.e., the sub-layer which runs 'below' the sub-layer identified by the corresponding
+      instance of ifStackHigherLayer - 1.3.6.1.2.1.31.1.2.1.2
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+  - name: ifStackStatus
+    oid: 1.3.6.1.2.1.31.1.2.1.3
+    type: gauge
+    help: The status of the relationship between two sub-layers - 1.3.6.1.2.1.31.1.2.1.3
+    indexes:
+    - labelname: ifStackHigherLayer
+      type: gauge
+    - labelname: ifStackLowerLayer
+      type: gauge
+    enum_values:
+      1: active
+      2: notInService
+      3: notReady
+      4: createAndGo
+      5: createAndWait
+      6: destroy
+  - name: ifTestId
+    oid: 1.3.6.1.2.1.31.1.3.1.1
+    type: gauge
+    help: This object identifies the current invocation of the interface's test. -
+      1.3.6.1.2.1.31.1.3.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifTestStatus
+    oid: 1.3.6.1.2.1.31.1.3.1.2
+    type: gauge
+    help: This object indicates whether or not some manager currently has the necessary
+      'ownership' required to invoke a test on this interface - 1.3.6.1.2.1.31.1.3.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: notInUse
+      2: inUse
+  - name: ifTestType
+    oid: 1.3.6.1.2.1.31.1.3.1.3
+    type: OctetString
+    help: A control variable used to start and stop operator- initiated interface
+      tests - 1.3.6.1.2.1.31.1.3.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifTestResult
+    oid: 1.3.6.1.2.1.31.1.3.1.4
+    type: gauge
+    help: This object contains the result of the most recently requested test, or
+      the value none(1) if no tests have been requested since the last reset - 1.3.6.1.2.1.31.1.3.1.4
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: none
+      2: success
+      3: inProgress
+      4: notSupported
+      5: unAbleToRun
+      6: aborted
+      7: failed
+  - name: ifTestCode
+    oid: 1.3.6.1.2.1.31.1.3.1.5
+    type: OctetString
+    help: This object contains a code which contains more specific information on
+      the test result, for example an error-code after a failed test - 1.3.6.1.2.1.31.1.3.1.5
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifTestOwner
+    oid: 1.3.6.1.2.1.31.1.3.1.6
+    type: DisplayString
+    help: The entity which currently has the 'ownership' required to invoke a test
+      on this interface. - 1.3.6.1.2.1.31.1.3.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifRcvAddressAddress
+    oid: 1.3.6.1.2.1.31.1.4.1.1
+    type: PhysAddress48
+    help: An address for which the system will accept packets/frames on this entry's
+      interface. - 1.3.6.1.2.1.31.1.4.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    - labelname: ifRcvAddressAddress
+      type: PhysAddress48
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: ifRcvAddressStatus
+    oid: 1.3.6.1.2.1.31.1.4.1.2
+    type: gauge
+    help: This object is used to create and delete rows in the ifRcvAddressTable.
+      - 1.3.6.1.2.1.31.1.4.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    - labelname: ifRcvAddressAddress
+      type: PhysAddress48
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: active
+      2: notInService
+      3: notReady
+      4: createAndGo
+      5: createAndWait
+      6: destroy
+  - name: ifRcvAddressType
+    oid: 1.3.6.1.2.1.31.1.4.1.3
+    type: gauge
+    help: This object has the value nonVolatile(3) for those entries in the table
+      which are valid and will not be deleted by the next restart of the managed system
+      - 1.3.6.1.2.1.31.1.4.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    - labelname: ifRcvAddressAddress
+      type: PhysAddress48
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: other
+      2: volatile
+      3: nonVolatile
+  - name: ifTableLastChange
+    oid: 1.3.6.1.2.1.31.1.5
+    type: gauge
+    help: The value of sysUpTime at the time of the last creation or deletion of an
+      entry in the ifTable - 1.3.6.1.2.1.31.1.5
+  - name: ifStackLastChange
+    oid: 1.3.6.1.2.1.31.1.6
+    type: gauge
+    help: The value of sysUpTime at the time of the last change of the (whole) interface
+      stack - 1.3.6.1.2.1.31.1.6
+  - name: f10IfIpMtu
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.1
+    type: gauge
+    help: The IP (Internet Protocol), Maximum Transmission Unit value. - 1.3.6.1.4.1.6027.3.11.1.1.1.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfDuplexMode
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.2
+    type: gauge
+    help: Duplex mode of the interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: half
+      2: full
+      3: auto
+  - name: f10IfQueueingStrategy
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.3
+    type: DisplayString
+    help: Queueing strategy used for packets. - 1.3.6.1.4.1.6027.3.11.1.1.1.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfRxFlowCtrl
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.4
+    type: gauge
+    help: Flow control receive - 1.3.6.1.4.1.6027.3.11.1.1.1.1.4
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: f10IfTxFlowCtrl
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.5
+    type: gauge
+    help: Flow Control transmit.This will be read-only only for s60 - 1.3.6.1.4.1.6027.3.11.1.1.1.1.5
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: "true"
+      2: "false"
+  - name: f10IfDescr
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.6
+    type: OctetString
+    help: A textual string containing information about the interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfAdminStatus
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.7
+    type: gauge
+    help: A admin status of any interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.7
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: up
+      2: down
+  - name: f10IfRateInterval
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.8
+    type: gauge
+    help: The rate info interval for the interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.8
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfSpeed
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.9
+    type: gauge
+    help: The interface's current bandwidth in bits per second - 1.3.6.1.4.1.6027.3.11.1.1.1.1.9
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: auto
+      10: tenMbps
+      100: hundredMbps
+      1000: thousandMbps
+  - name: f10IfDhcpAdminStatus
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.10
+    type: gauge
+    help: The desired state of DHCP on an interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.10
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: enable
+      2: disable
+      3: renew
+      4: release
+  - name: f10IfDhcpOperStatus
+    oid: 1.3.6.1.4.1.6027.3.11.1.1.1.1.11
+    type: gauge
+    help: The current state of DHCP on an interface - 1.3.6.1.4.1.6027.3.11.1.1.1.1.11
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+    enum_values:
+      1: enabled
+      2: disabled
+      3: bound
+      4: released
+      5: unknown
+  - name: f10IfInVlanPkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.1
+    type: counter
+    help: The total number of valid VLAN Tagged frames received. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfIn64BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.2
+    type: counter
+    help: The total number of frames (including bad frames) received that were 64
+      octets in length (excluding framing bits but in-cluding FCS octets). - 1.3.6.1.4.1.6027.3.11.1.2.1.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10ifIn65To127BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.3
+    type: counter
+    help: The total number of frames (including bad frames) received that were between
+      65 and 127 octets in length inclusive (ex-cluding framing bits but including
+      FCS octets). - 1.3.6.1.4.1.6027.3.11.1.2.1.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfIn128To255BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.4
+    type: counter
+    help: The total number of frames (including bad frames) received that were between
+      128 and 255 octets in length inclusive (excluding framing bits but including
+      FCS octets). - 1.3.6.1.4.1.6027.3.11.1.2.1.1.4
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfIn256To511BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.5
+    type: counter
+    help: The total number of frames (including bad frames) received that were between
+      256 and 511 octets in length inclusive (excluding framing bits but including
+      FCS octets). - 1.3.6.1.4.1.6027.3.11.1.2.1.1.5
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfIn512To1023BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.6
+    type: counter
+    help: The total number of frames (including bad frames) received that were between
+      512 and 1023 octets in length inclusive (excluding framing bits but including
+      FCS octets). - 1.3.6.1.4.1.6027.3.11.1.2.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInOver1023BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.7
+    type: counter
+    help: The total number of frames received that were longer than 1023 (1025 Bytes
+      in case of VLAN Tag) octets (excluding framing bits, but including FCS octets)
+      and were otherwise well formed - 1.3.6.1.4.1.6027.3.11.1.2.1.1.7
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInThrottles
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.8
+    type: counter
+    help: This counter is incremented when a valid frame with a length or type field
+      value equal to 0x8808 (Control Frame) is re-ceived. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.8
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInRunts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.9
+    type: counter
+    help: The total number of frames received that were less than 64 octets long (excluding
+      framing bits, but including FCS octets) and were otherwise well formed. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.9
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInGiants
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.10
+    type: counter
+    help: The total number of frames received that were longer than 1518 (1522 Bytes
+      in case of VLAN Tag) octets (excluding framing bits, but including FCS octets)
+      and were otherwise well formed - 1.3.6.1.4.1.6027.3.11.1.2.1.1.10
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInCRC
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.11
+    type: counter
+    help: The total number of frames received that had a length (ex-cluding framing
+      bits, but including FCS octets) of between 64 and 1518 octets, inclusive, but
+      had a bad CRC. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.11
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInOverruns
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.12
+    type: counter
+    help: The total number of frames dropped because of buffer issue. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.12
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutVlanPkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.13
+    type: counter
+    help: The Number of Good VLAN Tagged Frames sent successfully. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.13
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutUnderruns
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.14
+    type: counter
+    help: The total number of frames dropped because of buffer underrun. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.14
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutUnicasts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.15
+    type: counter
+    help: The Number of Good Unicast Frames sent successfully. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.15
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutCollisions
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.16
+    type: counter
+    help: A count of the frames that due to excessive or late collisions are not transmitted
+      successfully. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.16
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutWredDrops
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.17
+    type: counter
+    help: A count of the frames that are dropped using WRED policy because of to excessive
+      traffic. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.17
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOut64BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.18
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was 64 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.18
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOut65To127BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.19
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was in the range
+      of 65 to 127 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.19
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOut128To255BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.20
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was in the range
+      of 128 to 255 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.20
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOut256To511BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.21
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was in the range
+      of 256 to 511 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.21
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOut512To1023BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.22
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was in the range
+      of 512 to 1023 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.22
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutOver1023BytePkts
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.23
+    type: counter
+    help: The Number of Good Frames sent successfully whose size was greater than
+      1023 Bytes. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.23
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutThrottles
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.24
+    type: counter
+    help: This counter is incremented when a valid frame with a length or type field
+      value equal to 0x8808 (Control Frame) is sent. - 1.3.6.1.4.1.6027.3.11.1.2.1.1.24
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfLastDiscontinuityTime
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.25
+    type: gauge
+    help: The value of sysUpTime on the most recent occasion at which this interface's
+      counters suffered a discontinuity via a reset - 1.3.6.1.4.1.6027.3.11.1.2.1.1.25
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfInCentRate
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.26
+    type: gauge
+    help: This is the ingress rate in percentage - 1.3.6.1.4.1.6027.3.11.1.2.1.1.26
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: f10IfOutCentRate
+    oid: 1.3.6.1.4.1.6027.3.11.1.2.1.1.27
+    type: gauge
+    help: This is the egress rate in percentage - 1.3.6.1.4.1.6027.3.11.1.2.1.1.27
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: DisplayString
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: DisplayString
+  - name: fpStackUnitIndex
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.1
+    type: gauge
+    help: Stack unit number or line card number. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxHandle
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.2
+    type: gauge
+    help: Reception Handle - 1.3.6.1.4.1.6027.3.16.1.1.1.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpNoMhdr
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.3
+    type: gauge
+    help: Number of Message header - 1.3.6.1.4.1.6027.3.16.1.1.1.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpNoMBuf
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.4
+    type: gauge
+    help: Number of Message buffer - 1.3.6.1.4.1.6027.3.16.1.1.1.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpNoClus
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.5
+    type: gauge
+    help: Number of Clusters. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRecvd
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.6
+    type: gauge
+    help: Received statistics. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.6
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpDropped
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.7
+    type: gauge
+    help: Dropped statistics. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.7
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRecvToNet
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.8
+    type: gauge
+    help: Received to network. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.8
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.9
+    type: gauge
+    help: Gives statistics about the reception error - 1.3.6.1.4.1.6027.3.16.1.1.1.1.9
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxDatapathError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.10
+    type: gauge
+    help: Statistics of reception data path error. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.10
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS0
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.11
+    type: gauge
+    help: Packets received in COS 0 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.11
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS1
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.12
+    type: gauge
+    help: Packets received in COS 1 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.12
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS2
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.13
+    type: gauge
+    help: Packets received in COS 2 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.13
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS3
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.14
+    type: gauge
+    help: Packets received in COS 3 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.14
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS4
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.15
+    type: gauge
+    help: Packets received in COS 4 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.15
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS5
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.16
+    type: gauge
+    help: Packets received in COS 5 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.16
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS6
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.17
+    type: gauge
+    help: Packets received in COS 6 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.17
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktCOS7
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.18
+    type: gauge
+    help: Packets received in COS 7 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.18
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktUnit0
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.19
+    type: gauge
+    help: Packets received in Unit 0 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.19
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktUnit1
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.20
+    type: gauge
+    help: Packets received in Unit 1 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.20
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktUnit2
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.21
+    type: gauge
+    help: Packets received in Unit 2 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.21
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpRxPktUnit3
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.22
+    type: gauge
+    help: Packets received in Unit 3 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.22
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTransmitted
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.23
+    type: gauge
+    help: Transmitted statistics - 1.3.6.1.4.1.6027.3.16.1.1.1.1.23
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxRequested
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.24
+    type: gauge
+    help: Transmission requested. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.24
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpNoTxDesc
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.25
+    type: gauge
+    help: Transmission descriptor - 1.3.6.1.4.1.6027.3.16.1.1.1.1.25
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.26
+    type: gauge
+    help: Error in transmitted packets. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.26
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxReqTooLarge
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.27
+    type: gauge
+    help: Transmission requested too large. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.27
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxInternalError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.28
+    type: gauge
+    help: Internal error in transmitted data. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.28
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxDatapathErr
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.29
+    type: gauge
+    help: Data path error in transmitted data. - 1.3.6.1.4.1.6027.3.16.1.1.1.1.29
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS0
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.30
+    type: gauge
+    help: Packets Transmitted from COS Queue 0 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.30
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS1
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.31
+    type: gauge
+    help: Packets Transmitted from COS Queue 1 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.31
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS2
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.32
+    type: gauge
+    help: Packets Transmitted from COS Queue 2 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.32
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS3
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.33
+    type: gauge
+    help: Packets Transmitted from COS Queue 3 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.33
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS4
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.34
+    type: gauge
+    help: Packets Transmitted from COS Queue 4 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.34
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS5
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.35
+    type: gauge
+    help: Packets Transmitted from COS Queue 5 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.35
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS6
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.36
+    type: gauge
+    help: Packets Transmitted from COS Queue 6 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.36
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktCOS7
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.37
+    type: gauge
+    help: Packets Transmitted from COS Queue 7 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.37
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktUnit0
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.38
+    type: gauge
+    help: Packets Transmitted from Unit 0 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.38
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktUnit1
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.39
+    type: gauge
+    help: Packets Transmitted from Unit 1 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.39
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktUnit2
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.40
+    type: gauge
+    help: Packets Transmitted from Unit 2 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.40
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpTxPktUnit3
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.1.1.41
+    type: gauge
+    help: Packets transmitted from Unit3 - 1.3.6.1.4.1.6027.3.16.1.1.1.1.41
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusInputPackets
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.1
+    type: counter
+    help: Number of input packets. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusInputBytes
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.2
+    type: counter
+    help: Number of input bytes. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusInputDropped
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.3
+    type: counter
+    help: Number of input packets dropped. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusInputError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.4
+    type: counter
+    help: Error in input packets. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusOutputPackets
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.5
+    type: counter
+    help: Number of output packets. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusOutputBytes
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.6
+    type: counter
+    help: Number of bytes transmitted. - 1.3.6.1.4.1.6027.3.16.1.1.2.1.6
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpPartyBusOutputError
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.2.1.7
+    type: counter
+    help: Error in output - 1.3.6.1.4.1.6027.3.16.1.1.2.1.7
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+  - name: fpStackPortIndex
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.1
+    type: gauge
+    help: Stack/line card port number. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngressDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.2
+    type: counter
+    help: Ingress Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngIBPCBPFullDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.3
+    type: counter
+    help: The number of packets discarded because of Ingress Back Pressure (flow control),
+      or because the Common Buffer Pool is full. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngPortSTPnotFwdDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.4
+    type: counter
+    help: Packets dropped due to Spanning Tree State not in forwarding state. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngIPv4L3Discards
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.5
+    type: counter
+    help: IPv4 L3 Discards - 1.3.6.1.4.1.6027.3.16.1.1.3.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngPolicyDiscards
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.6
+    type: counter
+    help: Packet dropped due to policy discards. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.6
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngPacketsDroppedByFP
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.7
+    type: counter
+    help: Packets dropped by forwarding plane. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.7
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngL2L3Drops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.8
+    type: counter
+    help: L2 L3 packets dropped. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.8
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngPortBitMapZeroDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.9
+    type: counter
+    help: Port bitmap zero drop condition. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.9
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngRxVLANDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.10
+    type: counter
+    help: Rx VLAN drop condition. - 1.3.6.1.4.1.6027.3.16.1.1.3.1.10
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngressFCSDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.11
+    type: counter
+    help: Ingress FCSDrops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.11
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpIngressMTUExceeds
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.12
+    type: counter
+    help: Ingress MTUExceeds - 1.3.6.1.4.1.6027.3.16.1.1.3.1.12
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpMMUHOLDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.13
+    type: counter
+    help: MMU HOL DROPS - 1.3.6.1.4.1.6027.3.16.1.1.3.1.13
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpMMUTxPurgeCellErr
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.14
+    type: counter
+    help: TxPurge CellErr - 1.3.6.1.4.1.6027.3.16.1.1.3.1.14
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpMMUAgedDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.15
+    type: counter
+    help: Aged Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.15
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgressFCSDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.16
+    type: counter
+    help: Egress FCS Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.16
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgIPv4L3UCAgedDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.17
+    type: counter
+    help: IPv4 L3UC Aged & Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.17
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgTTLThresholdDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.18
+    type: counter
+    help: TTL Threshold Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.18
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgInvalidVLANCounterDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.19
+    type: counter
+    help: INVALID VLAN CNTR Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.19
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgL2MCDrops
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.20
+    type: counter
+    help: L2MC Drops - 1.3.6.1.4.1.6027.3.16.1.1.3.1.20
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgPktDropsOfAnyCondition
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.21
+    type: counter
+    help: PKT Drops of ANY Conditions - 1.3.6.1.4.1.6027.3.16.1.1.3.1.21
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgHgMacUnderFlow
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.22
+    type: counter
+    help: Hg MacUnderflow - 1.3.6.1.4.1.6027.3.16.1.1.3.1.22
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpEgTxErrPktCounter
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.3.1.23
+    type: counter
+    help: TX Err PKT Counter - 1.3.6.1.4.1.6027.3.16.1.1.3.1.23
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpPortPipe
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.4.1.1
+    type: gauge
+    help: fpPortPipe denotes the portpipe in the stack unit/line card. - 1.3.6.1.4.1.6027.3.16.1.1.4.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpPortPipe
+      type: gauge
+  - name: fpTotalPacketBuffer
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.4.1.2
+    type: counter
+    help: Total packet buffer. - 1.3.6.1.4.1.6027.3.16.1.1.4.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpPortPipe
+      type: gauge
+  - name: fpCurrentAvailBuffer
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.4.1.3
+    type: counter
+    help: Current available buffer. - 1.3.6.1.4.1.6027.3.16.1.1.4.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpPortPipe
+      type: gauge
+  - name: fpPacketBufferAlloc
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.4.1.4
+    type: counter
+    help: Static or Dynamic allocation. - 1.3.6.1.4.1.6027.3.16.1.1.4.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpPortPipe
+      type: gauge
+  - name: fpCurrentUsagePerPort
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.5.1.1
+    type: counter
+    help: Current usage per port. - 1.3.6.1.4.1.6027.3.16.1.1.5.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpDefaultPacketBuffAlloc
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.5.1.2
+    type: counter
+    help: Default packet buffer allocated. - 1.3.6.1.4.1.6027.3.16.1.1.5.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpMaxLimitPerPort
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.5.1.3
+    type: counter
+    help: MAx limit per port. - 1.3.6.1.4.1.6027.3.16.1.1.5.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpPerPortCOSNumber
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.6.1.1
+    type: gauge
+    help: COS queue number - 1.3.6.1.4.1.6027.3.16.1.1.6.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpCurrentUsagePerCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.6.1.2
+    type: counter
+    help: Current usage per COS per port. - 1.3.6.1.4.1.6027.3.16.1.1.6.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpDefaultPacketBuffAllocPerCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.6.1.3
+    type: counter
+    help: Default packet buffer allocated per COS. - 1.3.6.1.4.1.6027.3.16.1.1.6.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpMaxLimitPerCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.6.1.4
+    type: counter
+    help: Max limit per port. - 1.3.6.1.4.1.6027.3.16.1.1.6.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpHOLDropsPerCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.6.1.5
+    type: counter
+    help: HOL Drops Per Queue. - 1.3.6.1.4.1.6027.3.16.1.1.6.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpCOSIndex
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.7.1.1
+    type: gauge
+    help: CPU dataplane COS queue number. - 1.3.6.1.4.1.6027.3.16.1.1.7.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpCOSIndex
+      type: gauge
+  - name: fpRxPktCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.7.1.2
+    type: counter
+    help: Receive COS queue statistics in CPU dataplane. - 1.3.6.1.4.1.6027.3.16.1.1.7.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpCOSIndex
+      type: gauge
+  - name: fpTxPktCOS
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.7.1.3
+    type: counter
+    help: Transmit COS queue statistics in CPU dataplane. - 1.3.6.1.4.1.6027.3.16.1.1.7.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpCOSIndex
+      type: gauge
+  - name: fpEgrQTotBuffCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.8.1.1
+    type: counter
+    help: Total Cell count per Egress queue. - 1.3.6.1.4.1.6027.3.16.1.1.8.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortCOSNumber
+      type: gauge
+  - name: fpPerPortPGIndex
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.9.1.1
+    type: gauge
+    help: Priority-Group number. - 1.3.6.1.4.1.6027.3.16.1.1.9.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpIngSharedCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.9.1.2
+    type: counter
+    help: Shared cell count per priority group. - 1.3.6.1.4.1.6027.3.16.1.1.9.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpIngHeadroomCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.9.1.3
+    type: counter
+    help: Headroom cell count per priority group. - 1.3.6.1.4.1.6027.3.16.1.1.9.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgLimitMinCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.1
+    type: gauge
+    help: Min cells allocated per Priority Group. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgSharedCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.2
+    type: gauge
+    help: Shared cells allocated per Priority Group. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgSharedMode
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.3
+    type: gauge
+    help: Priority group shared mode[static/dynamic]. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+    enum_values:
+      0: static
+      1: dynamic
+  - name: fpStatsPgHdrmCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.4
+    type: gauge
+    help: Headroom cells allocated per Priority group. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgCounterMinCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.5
+    type: counter
+    help: Priority Group Min cell count. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgCounterSharedCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.6
+    type: counter
+    help: Priority Group Shared cell count. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.6
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: fpStatsPgCounterHdrmCells
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.10.1.7
+    type: counter
+    help: Priority group Headroom cell count. - 1.3.6.1.4.1.6027.3.16.1.1.10.1.7
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: fpPerPortPGIndex
+      type: gauge
+  - name: prioIndex
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.11.1.1
+    type: gauge
+    help: Priority Index. - 1.3.6.1.4.1.6027.3.16.1.1.11.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: prioIndex
+      type: gauge
+  - name: pfcPerPrioRequests
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.11.1.2
+    type: counter
+    help: PFC tx counters. - 1.3.6.1.4.1.6027.3.16.1.1.11.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: prioIndex
+      type: gauge
+  - name: pfcPerPrioIndications
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.11.1.3
+    type: counter
+    help: PFC rx counters. - 1.3.6.1.4.1.6027.3.16.1.1.11.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+    - labelname: prioIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutOctets
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.1
+    type: counter
+    help: Number of output octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.1
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutDropPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.2
+    type: counter
+    help: Number of output packets dropped. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.2
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS0Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.3
+    type: counter
+    help: Number of output packets in COS queue 0. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.3
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS1Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.4
+    type: counter
+    help: Number of output packets in COS queue 1. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.4
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS2Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.5
+    type: counter
+    help: Number of output packets in COS queue 2. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.5
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS3Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.6
+    type: counter
+    help: Number of output packets in COS queue 3. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.6
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS4Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.7
+    type: counter
+    help: Number of output packets in COS queue 4. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.7
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCOS5Pkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.8
+    type: counter
+    help: Number of output packets in COS queue 5. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.8
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutUnicastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.9
+    type: counter
+    help: Number of unicast output packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.9
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutMulticastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.10
+    type: counter
+    help: Number of multicast output packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.10
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutBroadcastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.11
+    type: counter
+    help: Number of broadcast output packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.11
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutPausePkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.12
+    type: counter
+    help: Number of output pause packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.12
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutCollisions
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.13
+    type: counter
+    help: Number of output collisions. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.13
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutSingleCollisions
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.14
+    type: counter
+    help: Number of single output collisions. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.14
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutMultiCollisions
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.15
+    type: counter
+    help: Number of multiple output collisions. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.15
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutLateCollisions
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.16
+    type: counter
+    help: Number of late output collisions. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.16
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutExcessCollisions
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.17
+    type: counter
+    help: Number of excess output collisions. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.17
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutDeferred
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.18
+    type: counter
+    help: Number of output packets deferred. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.18
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsOutDiscarded
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.19
+    type: counter
+    help: Number of output packets discarded. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.19
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInOctets
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.20
+    type: counter
+    help: Number of input octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.20
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInUndersizePkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.21
+    type: counter
+    help: Number of undersize input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.21
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInOversizePkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.22
+    type: counter
+    help: Number of oversize input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.22
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInPausePkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.23
+    type: counter
+    help: Number of input pause packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.23
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn64OctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.24
+    type: counter
+    help: Number of input packets of size 64 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.24
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn65To127OctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.25
+    type: counter
+    help: Number of input packets of size 65 to 127 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.25
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn128To255OctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.26
+    type: counter
+    help: Number of input packets of size 128 to 255 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.26
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn256To511OctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.27
+    type: counter
+    help: Number of input packets of size 256 to 511 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.27
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn512To1023OctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.28
+    type: counter
+    help: Number of input packets of size 512 to 1023 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.28
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsIn1024ToMaxOctetPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.29
+    type: counter
+    help: Number of input packets of size more than 1024 octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.29
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInJabbers
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.30
+    type: counter
+    help: Number of input jabbers. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.30
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInAlignErrors
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.31
+    type: counter
+    help: Number of input align errors. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.31
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInFcsErrors
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.32
+    type: counter
+    help: Number of input FCS errors. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.32
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInGoodOctets
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.33
+    type: counter
+    help: Number of good input octets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.33
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInDropPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.34
+    type: counter
+    help: Number of input packets dropped. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.34
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInUnicastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.35
+    type: counter
+    help: Number of unicast input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.35
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInMulticastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.36
+    type: counter
+    help: Number of multicast input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.36
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInBroadcastPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.37
+    type: counter
+    help: Number of broadcast input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.37
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInSrcAddrChanges
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.38
+    type: counter
+    help: Number of input source address changes. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.38
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInFragments
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.39
+    type: counter
+    help: Number of input fragments. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.39
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInJumboPkts
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.40
+    type: counter
+    help: Number of jumbo input packets. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.40
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInSymbolErrors
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.41
+    type: counter
+    help: Number of input symbol error. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.41
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInInRangeErrors
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.42
+    type: counter
+    help: Number of input in-range errors. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.42
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  - name: fpCpuPartyBusPortStatsInOutRangeErrors
+    oid: 1.3.6.1.4.1.6027.3.16.1.1.12.1.43
+    type: counter
+    help: Number of input out-of-range errors. - 1.3.6.1.4.1.6027.3.16.1.1.12.1.43
+    indexes:
+    - labelname: fpStackUnitIndex
+      type: gauge
+    - labelname: fpStackPortIndex
+      type: gauge
+  timeout: 5s
+  auth:
+    community: mgmt_hep

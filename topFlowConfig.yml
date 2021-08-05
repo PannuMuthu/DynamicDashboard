@@ -1,5 +1,6 @@
 # Number of switches
-switchNum: 1   
+switchNum: 1
+# Grafana Dashboard Title   
 dashTitle: "Top Flow Dashboard"
 # Host 1 Specifics 
 hostA:

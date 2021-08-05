@@ -53,6 +53,7 @@ if data['switchNum'] == 1:
                 line = line.replace(src, target)
             outfile.write(line)
     subprocess.run("sudo cp out.json /home/pmuthukumar", shell=True)
+    # Run the API script to convert output JSON to Grafana dashboard automatically
     subprocess.run("sudo python3 api.py out.json", shell=True)
 else:
     with open('generatorTemplate.yml') as inGen, open('generator.yml', 'w') as outGen:
@@ -99,4 +100,5 @@ else:
                 line = line.replace(src, target)
             outfile.write(line)
     subprocess.run("sudo cp out.json /home/pmuthukumar", shell=True)
+    # Run the API script to convert output JSON to Grafana dashboard automatically
     subprocess.run("sudo python3 api.py out.json", shell=True)

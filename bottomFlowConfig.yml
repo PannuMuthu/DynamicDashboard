@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 1
+# Title of Grafana dashboard
 dashTitle: "Bottom Flow Dashboard"
 # Host 1 Specifics 
 hostA:

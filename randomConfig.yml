@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 1
+# Grafana Dashboard Title
 dashTitle: "Random Dashboard"
 # Host 1 Specifics 
 hostA:

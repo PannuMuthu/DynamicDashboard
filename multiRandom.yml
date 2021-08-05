@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 2
+# Grafana Dashboard Title
 dashTitle: "Random Multiple Network Element Dashboard"
 
 # Host 1 Specifics 

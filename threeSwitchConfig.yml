@@ -1,5 +1,6 @@
 # Number of switches
 switchNum: 3
+# Grafana Dashboard Title
 dashTitle: "Three Network Element Dashboard"
 # Host 1 Specifics 
 hostA:

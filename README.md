@@ -6,6 +6,7 @@ The custom script has the following functionalities:
 - Modifying the layout of the Grafana dashboard dynamically for multiple network elements
 - Displaying flow-specific end-to-end information based on the config file information
 - Dynamically constructing an SNMP Exporter config file to poll fine-grained OIDs from specific interfaces as specified in the config file
+- Automatically turning on/off SNMP Exporter for specific scrape times and durations specified in config file through the SNMP Config File
 - Automatically loading JSON files to Grafana via Dashboard HTTP API
 
 ## Python Script

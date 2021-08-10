@@ -5,6 +5,12 @@ import sys
 import fileinput
 import subprocess
 import os
+from datetime import datetime
+
+# Get current time stamp
+now = datetime.now()
+current_time = now.strftime("%d/%m/%Y_%H:%M:%S")
+timeTxt = " ( " + str(current_time) + " )"
 
 # Load yaml config file as dict
 data = {}
@@ -44,7 +50,7 @@ if data['switchNum'] == 1:
                     'PORTB': str(data['hostB']['nodeExporterPort']),
                     'IPSWITCH': str(data['switchData']['target']),
                     'SNMPNAME': str(data['switchData']['job_name']),
-                    'DASHTITLE': str(data['dashTitle'])}
+                    'DASHTITLE': str(data['dashTitle']) + timeTxt }
 
     # Iteratively find and replace in one go 
     with open('template.json') as infile, open('out.json', 'w') as outfile:
@@ -91,7 +97,7 @@ else:
                     'IPSWITCHA': str(data['switchDataA']['target']),
                     'IPSWITCHB': str(data['switchDataB']['target']),
                     'SNMPNAME': str(data['switchDataA']['job_name']),
-                    'DASHTITLE':str(data['dashTitle'])}
+                    'DASHTITLE':str(data['dashTitle']) + timeTxt}
 
     # Iteratively find and replace in one go 
     with open('templateTwo.json') as infile, open('out.json', 'w') as outfile:

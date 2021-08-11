@@ -1,0 +1,66 @@
+# Number of switches
+switchNum: 3
+# Grafana Dashboard Title
+dashTitle: "Random Three Network Element Dashboard"
+# Host 1 Specifics 
+hostA:
+  IP: 198.32.43.15
+  interfaceName: 'enp4s0f0'
+  interfaceIP: '10.10.101.1/24'
+  vlan: 3615
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/43'
+    ifIndex: 1054084
+# Host 2 Specifics
+hostB:
+  IP: 198.32.43.16
+  interfaceName: 'enp4s0f1'
+  interfaceIP: '10.10.101.2/24'
+  vlan: 3618
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/42'
+    ifIndex: 1053956
+# Switch 1 Specifics
+switchDataA:
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 172.16.1.14
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/43'
+    ifIndex: 1054084
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/8'
+    ifIndex: 1049604
+# Switch 2 Specifics
+switchDataB:
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 1.1.1.1
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/11'
+    ifIndex: 1049988
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/12'
+    ifIndex: 1050116
+# Switch 3 Specifics
+switchDataC: 
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 2.2.2.2
+    # if-mib and F10-FPSTATS-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.16]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/9'
+    ifIndex: 1049732
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/42'
+    ifIndex: 1053956

@@ -84,6 +84,8 @@ try:
         oids = set()
         oids.update(data['switchDataA']['params'])
         oids.update(data['switchDataB']['params'])
+        if data['switchNum'] == 3:
+            oids.update(data['switchDataC']['params'])
         for i in range(len(oids)):
             oid = next(iter(oids))
             snip = "      - " + str(oid) + "\n"
@@ -102,24 +104,45 @@ try:
         os.chdir('/root/DynamicDashboard')
         print("Restarting SNMP Exporter instance with custom SNMP config file...")
         # Map of replacements to complete from template.json to out.json
-        replacements = {'IPHOSTA': str(data['hostA']['IP']), 
-                        'IPHOSTB': str(data['hostB']['IP']),
-                        'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
-                        'IFNAMEHOSTB': str(data['hostB']['interfaceName']),
-                        'IFNAMESWITCHHOSTA': str(data['hostA']['switchPort']['ifIndex']),
-                        'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
-                        'SWITCHBINCOMING': str(data['switchDataB']['portIn']['ifIndex']),
-                        'SWITCHAOUTGOING': str(data['switchDataA']['portOut']['ifIndex']),
-                        'PORTA': str(data['hostA']['nodeExporterPort']),
-                        'PORTB': str(data['hostB']['nodeExporterPort']),
-                        'IPSWITCHA': str(data['switchDataA']['target']),
-                        'IPSWITCHB': str(data['switchDataB']['target']),
-                        'SNMPNAME': str(data['switchDataA']['job_name']),
-                        'DASHTITLE':str(data['dashTitle']) + timeTxt}
+        replacements = {}
+        if data['switchNum'] == 2:
+            replacements = {'IPHOSTA': str(data['hostA']['IP']), 
+                            'IPHOSTB': str(data['hostB']['IP']),
+                            'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
+                            'IFNAMEHOSTB': str(data['hostB']['interfaceName']),
+                            'IFNAMESWITCHHOSTA': str(data['hostA']['switchPort']['ifIndex']),
+                            'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
+                            'SWITCHBINCOMING': str(data['switchDataB']['portIn']['ifIndex']),
+                            'SWITCHAOUTGOING': str(data['switchDataA']['portOut']['ifIndex']),
+                            'PORTA': str(data['hostA']['nodeExporterPort']),
+                            'PORTB': str(data['hostB']['nodeExporterPort']),
+                            'IPSWITCHA': str(data['switchDataA']['target']),
+                            'IPSWITCHB': str(data['switchDataB']['target']),
+                            'SNMPNAME': str(data['switchDataA']['job_name']),
+                            'DASHTITLE':str(data['dashTitle']) + timeTxt}
+        else:
+            replacements = {'IPHOSTA': str(data['hostA']['IP']), 
+                            'IPHOSTB': str(data['hostB']['IP']),
+                            'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
+                            'IFNAMEHOSTB': str(data['hostB']['interfaceName']),
+                            'IFNAMESWITCHHOSTA': str(data['hostA']['switchPort']['ifIndex']),
+                            'SWITCHAOUTGOING': str(data['switchDataA']['portOut']['ifIndex']),
+                            'SWITCHBINCOMING': str(data['switchDataB']['portIn']['ifIndex']),
+                            'SWITCHBOUTGOING': str(data['switchDataB']['portOut']['ifIndex']),
+                            'SWITCHCINCOMING': str(data['switchDataC']['portIn']['ifIndex']),
+                            'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
+                            'PORTA': str(data['hostA']['nodeExporterPort']),
+                            'PORTB': str(data['hostB']['nodeExporterPort']),
+                            'IPSWITCHA': str(data['switchDataA']['target']),
+                            'IPSWITCHB': str(data['switchDataB']['target']),
+                            'IPSWITCHC': str(data['switchDataC']['target']),
+                            'SNMPNAME': str(data['switchDataA']['job_name']),
+                            'DASHTITLE':str(data['dashTitle']) + timeTxt}
         print("Creating custom Grafana JSON Dashboard...")
 
         # Iteratively find and replace in one go 
-        with open('templateTwo.json') as infile, open('out.json', 'w') as outfile:
+        fname = "template" + str(data['switchNum']) + ".json"
+        with open(fname) as infile, open('out.json', 'w') as outfile:
             for line in infile:
                 for src, target in replacements.items():
                     line = line.replace(src, target)

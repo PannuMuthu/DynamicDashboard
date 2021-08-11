@@ -20,7 +20,7 @@ The output of the Python script is two files:
 
 
 ## Config File
-In this repository, there are multiple sample config files (```bottomFlowConfig.yml```, ```multiRandom.yml```, ```multiSwitchConfig.yml```, ```randomConfig.yml```, ```threeSwitchConfig.yml```, ```topFlowConfig.yml```). 
+In this repository, there are multiple sample config files (```bottomFlowConfig.yml```, ```multiRandom.yml```, ```multiSwitchConfig.yml```, ```randomConfig.yml```, ```threeSwitchConfig.yml```, ```topFlowConfig.yml```, ```threeRandom.yml```). 
 The config files contain the following information: 
 - Host Information:
   - Host IP Address
@@ -40,5 +40,6 @@ In order for the Python script to run, it utilizes a set of templating files as 
   - ```generator.yml```
   - ```generatorTemplate.yml```
   - ```template.json```
-  - ```templateTwo.json```
+  - ```template2.json```
+  - ```template3.json```
   - ```api.py```

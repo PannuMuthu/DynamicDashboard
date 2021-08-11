@@ -2,6 +2,8 @@
 switchNum: 1
 # Title of Grafana dashboard
 dashTitle: "Bottom Flow Dashboard"
+# Prometheus Port
+prometheusPort: 9090
 # Host 1 Specifics 
 hostA:
   IP: 198.32.43.16

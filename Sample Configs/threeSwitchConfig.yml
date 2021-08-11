@@ -2,6 +2,8 @@
 switchNum: 3
 # Grafana Dashboard Title
 dashTitle: "Three Network Element Dashboard"
+# Prometheus Port
+prometheusPort: 9090
 # Host 1 Specifics 
 hostA:
   IP: 198.32.43.16

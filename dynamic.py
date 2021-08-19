@@ -57,6 +57,8 @@ else:
                             'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
                             'IFNAMEHOSTB': str(data['hostB']['interfaceName']),
                             'IFNAMESWITCHHOSTA': str(data['hostA']['switchPort']['ifIndex']),
+                            'NAMEIFSWITCHA': str(data['hostA']['switchPort']['ifName']),
+                            'NAMEIFSWITCHB': str(data['hostB']['switchPort']['ifName']),
                             'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
                             'PORTA': str(data['hostA']['nodeExporterPort']),
                             'PORTB': str(data['hostB']['nodeExporterPort']),

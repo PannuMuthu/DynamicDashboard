@@ -1,5 +1,5 @@
 {
-"dashboard": {
+  "dashboard": {
     "id": null,
     "uid": null,
     "title": "DASHTITLE",
@@ -23,8 +23,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 14,
-  "iteration": 1625717090031,
+  "id": 56,
+  "iteration": 1629394952529,
   "links": [
     {
       "asDropdown": false,
@@ -55,6 +55,105 @@
     {
       "datasource": null,
       "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "valueName": "last"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 117,
+      "options": {
+        "authPassword": "",
+        "authUsername": "",
+        "composites": [],
+        "content": "graph LR\n      subgraph h1 [\"Host 1\"]\n      style h1 fill:#575757\n      ip{{IP: IPHOSTA}}\n      e(IFNAMEHOSTA)\n      end\n      e(IFNAMEHOSTA) ------- s1if1[NAMEIFSWITCHA]\n      subgraph s1 [\"Switch 1\"]\n      style s1 fill:#757575\n      s1ip{{IP: IPSWITCH}}\n      subgraph if [\"Interfaces\"]\n      s1if1[NAMEIFSWITCHA]\n      s1if2[NAMEIFSWITCHB]\n      end\n      end\n      s1if2[NAMEIFSWITCHB] ------- e2(IFNAMEHOSTB)\n      subgraph h2 [\"Host 2\"]\n      style h2 fill:#575757\n      ip2{{IP: IPHOSTB}}\n      e2(IFNAMEHOSTB)\n      end",
+        "legend": {
+          "asTable": true,
+          "displayMode": "table",
+          "gradient": {
+            "enabled": true,
+            "show": true
+          },
+          "hideEmpty": false,
+          "hideZero": false,
+          "placement": "bottom",
+          "show": true,
+          "sortBy": "last",
+          "sortDesc": true,
+          "stats": [
+            "mean",
+            "last",
+            "min",
+            "max",
+            "sum"
+          ]
+        },
+        "maxWidth": true,
+        "mermaidServiceUrl": "",
+        "mermaidThemeVariablesDark": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif"
+          },
+          "flowChart": {},
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "mermaidThemeVariablesLight": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif"
+          },
+          "flowChart": {},
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "metricCharacterReplacements": [],
+        "moddedSeriesVal": 0,
+        "mode": "content",
+        "nodeSize": {
+          "minHeight": 40,
+          "minWidth": 30
+        },
+        "pluginVersion": "7.5.4",
+        "style": "",
+        "useBackground": false,
+        "useBasicAuth": false,
+        "valueName": "last"
+      },
+      "pluginVersion": "1.7.3",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Flow Visualization",
+      "transparent": true,
+      "type": "jdbranham-diagram-panel"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
         "defaults": {},
         "overrides": []
       },
@@ -62,7 +161,7 @@
         "h": 1,
         "w": 8,
         "x": 0,
-        "y": 0
+        "y": 16
       },
       "id": 12,
       "options": {
@@ -86,7 +185,7 @@
         "h": 1,
         "w": 8,
         "x": 8,
-        "y": 0
+        "y": 16
       },
       "id": 13,
       "options": {
@@ -110,7 +209,7 @@
         "h": 1,
         "w": 8,
         "x": 16,
-        "y": 0
+        "y": 16
       },
       "id": 14,
       "options": {
@@ -131,7 +230,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 17
       },
       "id": 4,
       "panels": [],
@@ -149,7 +248,7 @@
         "h": 2,
         "w": 8,
         "x": 0,
-        "y": 2
+        "y": 18
       },
       "id": 2,
       "options": {
@@ -183,7 +282,7 @@
         "h": 2,
         "w": 8,
         "x": 8,
-        "y": 2
+        "y": 18
       },
       "id": 15,
       "options": {
@@ -217,7 +316,7 @@
         "h": 2,
         "w": 8,
         "x": 16,
-        "y": 2
+        "y": 18
       },
       "id": 16,
       "options": {
@@ -253,7 +352,7 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 20
       },
       "id": 18,
       "links": [],
@@ -768,7 +867,7 @@
         "h": 3,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 24
       },
       "id": 23,
       "links": [],
@@ -898,7 +997,7 @@
         "h": 3,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 24
       },
       "id": 115,
       "links": [],
@@ -1034,7 +1133,7 @@
         "h": 11,
         "w": 8,
         "x": 0,
-        "y": 11
+        "y": 27
       },
       "hiddenSeries": false,
       "id": 26,
@@ -1174,7 +1273,7 @@
         "h": 11,
         "w": 8,
         "x": 8,
-        "y": 11
+        "y": 27
       },
       "hiddenSeries": false,
       "id": 28,
@@ -1315,7 +1414,7 @@
         "h": 11,
         "w": 8,
         "x": 16,
-        "y": 11
+        "y": 27
       },
       "hiddenSeries": false,
       "id": 30,
@@ -1455,7 +1554,7 @@
         "h": 11,
         "w": 8,
         "x": 0,
-        "y": 22
+        "y": 38
       },
       "hiddenSeries": false,
       "id": 29,
@@ -1595,7 +1694,7 @@
         "h": 11,
         "w": 8,
         "x": 8,
-        "y": 22
+        "y": 38
       },
       "hiddenSeries": false,
       "id": 32,
@@ -1735,7 +1834,7 @@
         "h": 11,
         "w": 8,
         "x": 16,
-        "y": 22
+        "y": 38
       },
       "hiddenSeries": false,
       "id": 31,
@@ -1873,7 +1972,7 @@
         "h": 11,
         "w": 8,
         "x": 0,
-        "y": 33
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 35,
@@ -2011,7 +2110,7 @@
         "h": 11,
         "w": 8,
         "x": 8,
-        "y": 33
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 33,
@@ -2143,7 +2242,7 @@
         "h": 11,
         "w": 8,
         "x": 16,
-        "y": 33
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 36,
@@ -2281,7 +2380,7 @@
         "h": 11,
         "w": 8,
         "x": 0,
-        "y": 44
+        "y": 60
       },
       "hiddenSeries": false,
       "id": 37,
@@ -2419,7 +2518,7 @@
         "h": 11,
         "w": 8,
         "x": 8,
-        "y": 44
+        "y": 60
       },
       "hiddenSeries": false,
       "id": 34,
@@ -2558,7 +2657,7 @@
         "h": 11,
         "w": 8,
         "x": 16,
-        "y": 44
+        "y": 60
       },
       "hiddenSeries": false,
       "id": 38,
@@ -2662,7 +2761,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 55
+        "y": 71
       },
       "id": 6,
       "panels": [],
@@ -2689,7 +2788,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 56
+        "y": 72
       },
       "height": "",
       "hiddenSeries": false,
@@ -2823,7 +2922,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 56
+        "y": 72
       },
       "height": "",
       "hiddenSeries": false,
@@ -2956,7 +3055,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 66
+        "y": 82
       },
       "height": "",
       "hiddenSeries": false,
@@ -3104,7 +3203,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 66
+        "y": 82
       },
       "height": "",
       "hiddenSeries": false,
@@ -3251,7 +3350,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 76
+        "y": 92
       },
       "height": "",
       "hiddenSeries": false,
@@ -3379,7 +3478,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 76
+        "y": 92
       },
       "height": "",
       "hiddenSeries": false,
@@ -3508,7 +3607,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 86
+        "y": 102
       },
       "height": "",
       "hiddenSeries": false,
@@ -3649,7 +3748,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 86
+        "y": 102
       },
       "height": "",
       "hiddenSeries": false,
@@ -3789,7 +3888,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 96
+        "y": 112
       },
       "height": "",
       "hiddenSeries": false,
@@ -3908,7 +4007,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 96
+        "y": 112
       },
       "height": "",
       "hiddenSeries": false,
@@ -4027,7 +4126,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 106
+        "y": 122
       },
       "hiddenSeries": false,
       "id": 46,
@@ -4132,7 +4231,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 106
+        "y": 122
       },
       "hiddenSeries": false,
       "id": 47,
@@ -4237,7 +4336,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 116
+        "y": 132
       },
       "hiddenSeries": false,
       "id": 49,
@@ -4363,7 +4462,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 116
+        "y": 132
       },
       "hiddenSeries": false,
       "id": 50,
@@ -4478,7 +4577,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 126
+        "y": 142
       },
       "id": 8,
       "panels": [],
@@ -4530,7 +4629,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 127
+        "y": 143
       },
       "id": 52,
       "links": [],
@@ -4609,7 +4708,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 127
+        "y": 143
       },
       "id": 55,
       "links": [],
@@ -4688,7 +4787,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 127
+        "y": 143
       },
       "id": 53,
       "links": [],
@@ -4767,7 +4866,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 127
+        "y": 143
       },
       "id": 56,
       "links": [],
@@ -4839,7 +4938,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 131
+        "y": 147
       },
       "hideTimeOverride": false,
       "id": 58,
@@ -4931,7 +5030,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 131
+        "y": 147
       },
       "id": 60,
       "links": [],
@@ -5002,7 +5101,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 131
+        "y": 147
       },
       "hideTimeOverride": false,
       "id": 62,
@@ -5094,7 +5193,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 131
+        "y": 147
       },
       "id": 61,
       "links": [],
@@ -5162,7 +5261,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 135
+        "y": 151
       },
       "hiddenSeries": false,
       "id": 64,
@@ -5366,7 +5465,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 135
+        "y": 151
       },
       "hiddenSeries": false,
       "id": 65,
@@ -5575,7 +5674,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 142
+        "y": 158
       },
       "hiddenSeries": false,
       "id": 68,
@@ -5771,7 +5870,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 142
+        "y": 158
       },
       "hiddenSeries": false,
       "id": 67,
@@ -5945,7 +6044,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 149
+        "y": 165
       },
       "hiddenSeries": false,
       "id": 70,
@@ -6066,7 +6165,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 149
+        "y": 165
       },
       "hiddenSeries": false,
       "id": 71,
@@ -6181,7 +6280,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 159
+        "y": 175
       },
       "hiddenSeries": false,
       "id": 73,
@@ -6341,7 +6440,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 159
+        "y": 175
       },
       "hiddenSeries": false,
       "id": 74,
@@ -6490,7 +6589,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 169
+        "y": 185
       },
       "id": 91,
       "panels": [],
@@ -6527,7 +6626,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 170
+        "y": 186
       },
       "id": 108,
       "interval": null,
@@ -6622,7 +6721,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 170
+        "y": 186
       },
       "id": 110,
       "interval": null,
@@ -6716,7 +6815,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 170
+        "y": 186
       },
       "id": 112,
       "interval": null,
@@ -6810,7 +6909,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 170
+        "y": 186
       },
       "id": 114,
       "interval": "",
@@ -6892,7 +6991,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 173
+        "y": 189
       },
       "hiddenSeries": false,
       "id": 85,
@@ -6990,7 +7089,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 173
+        "y": 189
       },
       "hiddenSeries": false,
       "id": 87,
@@ -7090,7 +7189,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 181
+        "y": 197
       },
       "height": "",
       "hiddenSeries": false,
@@ -7218,7 +7317,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 181
+        "y": 197
       },
       "height": "",
       "hiddenSeries": false,
@@ -7347,7 +7446,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 191
+        "y": 207
       },
       "height": "",
       "hiddenSeries": false,
@@ -7474,7 +7573,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 191
+        "y": 207
       },
       "height": "",
       "hiddenSeries": false,
@@ -7601,7 +7700,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 201
+        "y": 217
       },
       "height": "",
       "hiddenSeries": false,
@@ -7718,7 +7817,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 201
+        "y": 217
       },
       "height": "",
       "hiddenSeries": false,
@@ -7835,7 +7934,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 211
+        "y": 227
       },
       "height": "",
       "hiddenSeries": false,
@@ -7967,7 +8066,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 211
+        "y": 227
       },
       "height": "",
       "hiddenSeries": false,
@@ -8098,7 +8197,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 221
+        "y": 237
       },
       "height": "",
       "hiddenSeries": false,
@@ -8245,7 +8344,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 221
+        "y": 237
       },
       "height": "",
       "hiddenSeries": false,
@@ -8680,13 +8779,13 @@
           },
           {
             "selected": false,
-            "text": "1054340",
-            "value": "1054340"
+            "text": "IFNAMESWITCHHOSTB",
+            "value": "IFNAMESWITCHHOSTB"
           },
           {
             "selected": false,
-            "text": "1054468",
-            "value": "1054468"
+            "text": "IFNAMESWITCHHOSTA",
+            "value": "IFNAMESWITCHHOSTA"
           },
           {
             "selected": false,

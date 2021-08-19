@@ -1,4 +1,5 @@
-{"dashboard": {
+{
+  "dashboard": {
     "id": null,
     "uid": null,
     "title": "DASHTITLE",
@@ -22,8 +23,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 28,
-  "iteration": 1628649367199,
+  "id": 62,
+  "iteration": 1629399737085,
   "links": [
     {
       "asDropdown": false,
@@ -54,6 +55,105 @@
     {
       "datasource": null,
       "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "valueName": "last"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 143,
+      "options": {
+        "authPassword": "",
+        "authUsername": "",
+        "composites": [],
+        "content": "graph LR\n      subgraph h1 [\"Host 1\"]\n      style h1 fill:#575757\n      ip{{IP: IPHOSTA}}\n      e(IFNAMEHOSTA)\n      end\n      e(IFNAMEHOSTA) ------- s1if1[NAMEIFAIN]\n\n      subgraph s1 [\"Switch 1\"]\n      style s1 fill:#757575\n      s1ip{{IP: IPSWITCHA}}\n      subgraph if [\"Interfaces\"]\n      s1if2[NAMEIFAOUT]\n      s1if1[NAMEIFAIN]\n      end\n      end\n\n      subgraph s3 [\"Switch 2\"]\n      style s3 fill:#757575\n      s3ip{{IP: IPSWITCHB}}\n      subgraph if3 [\"Interfaces\"]\n      s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT]\n      end\n      end\n\n      subgraph s2 [\"Switch 3\"]\n      style s2 fill:#757575\n      s2ip{{IP: IPSWITCHC}}\n      subgraph if2 [\"Interfaces\"]\n      s2if2[NAMEIFCOUT]\n      s2if1[NAMEIFCIN]\n      end\n      end\n      s1if2[NAMEIFAOUT] ------- s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT] ------- s2if1[NAMEIFCIN]\n      s2if2[NAMEIFCOUT] ------- e2(IFNAMEHOSTB)\n      subgraph h2 [\"Host 2\"]\n      style h2 fill:#575757\n      ip2{{IP: IPHOSTB}}\n      e2(IFNAMEHOSTB)\n      end",
+        "legend": {
+          "asTable": true,
+          "displayMode": "table",
+          "gradient": {
+            "enabled": true,
+            "show": true
+          },
+          "hideEmpty": false,
+          "hideZero": false,
+          "placement": "bottom",
+          "show": true,
+          "sortBy": "last",
+          "sortDesc": true,
+          "stats": [
+            "mean",
+            "last",
+            "min",
+            "max",
+            "sum"
+          ]
+        },
+        "maxWidth": true,
+        "mermaidServiceUrl": "",
+        "mermaidThemeVariablesDark": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif"
+          },
+          "flowChart": {},
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "mermaidThemeVariablesLight": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif"
+          },
+          "flowChart": {},
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "metricCharacterReplacements": [],
+        "moddedSeriesVal": 0,
+        "mode": "content",
+        "nodeSize": {
+          "minHeight": 40,
+          "minWidth": 30
+        },
+        "pluginVersion": "7.5.4",
+        "style": "",
+        "useBackground": false,
+        "useBasicAuth": false,
+        "valueName": "last"
+      },
+      "pluginVersion": "1.7.3",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Flow Visualization",
+      "transparent": true,
+      "type": "jdbranham-diagram-panel"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
         "defaults": {},
         "overrides": []
       },
@@ -61,7 +161,7 @@
         "h": 1,
         "w": 5,
         "x": 0,
-        "y": 0
+        "y": 16
       },
       "id": 12,
       "options": {
@@ -85,7 +185,7 @@
         "h": 1,
         "w": 5,
         "x": 5,
-        "y": 0
+        "y": 16
       },
       "id": 13,
       "options": {
@@ -109,7 +209,7 @@
         "h": 1,
         "w": 5,
         "x": 10,
-        "y": 0
+        "y": 16
       },
       "id": 116,
       "options": {
@@ -133,7 +233,7 @@
         "h": 1,
         "w": 5,
         "x": 15,
-        "y": 0
+        "y": 16
       },
       "id": 129,
       "options": {
@@ -157,7 +257,7 @@
         "h": 1,
         "w": 4,
         "x": 20,
-        "y": 0
+        "y": 16
       },
       "id": 14,
       "options": {
@@ -178,7 +278,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 17
       },
       "id": 4,
       "panels": [],
@@ -196,7 +296,7 @@
         "h": 2,
         "w": 5,
         "x": 0,
-        "y": 2
+        "y": 18
       },
       "id": 2,
       "options": {
@@ -230,7 +330,7 @@
         "h": 2,
         "w": 5,
         "x": 5,
-        "y": 2
+        "y": 18
       },
       "id": 15,
       "options": {
@@ -264,7 +364,7 @@
         "h": 2,
         "w": 5,
         "x": 10,
-        "y": 2
+        "y": 18
       },
       "id": 117,
       "options": {
@@ -298,7 +398,7 @@
         "h": 2,
         "w": 5,
         "x": 15,
-        "y": 2
+        "y": 18
       },
       "id": 130,
       "options": {
@@ -332,7 +432,7 @@
         "h": 2,
         "w": 4,
         "x": 20,
-        "y": 2
+        "y": 18
       },
       "id": 16,
       "options": {
@@ -368,7 +468,7 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 4
+        "y": 20
       },
       "id": 18,
       "links": [],
@@ -859,7 +959,7 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 24
       },
       "id": 131,
       "links": [],
@@ -1350,7 +1450,7 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 28
       },
       "id": 118,
       "links": [],
@@ -1865,7 +1965,7 @@
         "h": 4,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 32
       },
       "id": 23,
       "links": [],
@@ -1995,7 +2095,7 @@
         "h": 4,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 32
       },
       "id": 115,
       "links": [],
@@ -2131,7 +2231,7 @@
         "h": 11,
         "w": 5,
         "x": 0,
-        "y": 20
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 26,
@@ -2271,7 +2371,7 @@
         "h": 11,
         "w": 5,
         "x": 5,
-        "y": 20
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 28,
@@ -2412,7 +2512,7 @@
         "h": 11,
         "w": 5,
         "x": 10,
-        "y": 20
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 119,
@@ -2553,7 +2653,7 @@
         "h": 11,
         "w": 5,
         "x": 15,
-        "y": 20
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 132,
@@ -2694,7 +2794,7 @@
         "h": 11,
         "w": 4,
         "x": 20,
-        "y": 20
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 30,
@@ -2834,7 +2934,7 @@
         "h": 11,
         "w": 5,
         "x": 0,
-        "y": 31
+        "y": 47
       },
       "hiddenSeries": false,
       "id": 29,
@@ -2974,7 +3074,7 @@
         "h": 11,
         "w": 5,
         "x": 5,
-        "y": 31
+        "y": 47
       },
       "hiddenSeries": false,
       "id": 32,
@@ -3114,7 +3214,7 @@
         "h": 11,
         "w": 5,
         "x": 10,
-        "y": 31
+        "y": 47
       },
       "hiddenSeries": false,
       "id": 120,
@@ -3254,7 +3354,7 @@
         "h": 11,
         "w": 5,
         "x": 15,
-        "y": 31
+        "y": 47
       },
       "hiddenSeries": false,
       "id": 133,
@@ -3394,7 +3494,7 @@
         "h": 11,
         "w": 4,
         "x": 20,
-        "y": 31
+        "y": 47
       },
       "hiddenSeries": false,
       "id": 31,
@@ -3532,7 +3632,7 @@
         "h": 11,
         "w": 5,
         "x": 0,
-        "y": 42
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 35,
@@ -3670,7 +3770,7 @@
         "h": 11,
         "w": 5,
         "x": 5,
-        "y": 42
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 33,
@@ -3802,7 +3902,7 @@
         "h": 11,
         "w": 5,
         "x": 10,
-        "y": 42
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 121,
@@ -3934,7 +4034,7 @@
         "h": 11,
         "w": 5,
         "x": 15,
-        "y": 42
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 134,
@@ -4066,7 +4166,7 @@
         "h": 11,
         "w": 4,
         "x": 20,
-        "y": 42
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 36,
@@ -4204,7 +4304,7 @@
         "h": 11,
         "w": 5,
         "x": 0,
-        "y": 53
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 37,
@@ -4342,7 +4442,7 @@
         "h": 11,
         "w": 5,
         "x": 5,
-        "y": 53
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 34,
@@ -4481,7 +4581,7 @@
         "h": 11,
         "w": 5,
         "x": 10,
-        "y": 53
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 122,
@@ -4620,7 +4720,7 @@
         "h": 11,
         "w": 5,
         "x": 15,
-        "y": 53
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 135,
@@ -4759,7 +4859,7 @@
         "h": 11,
         "w": 4,
         "x": 20,
-        "y": 53
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 38,
@@ -4863,7 +4963,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 64
+        "y": 80
       },
       "id": 6,
       "panels": [],
@@ -4890,7 +4990,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 65
+        "y": 81
       },
       "height": "",
       "hiddenSeries": false,
@@ -5024,7 +5124,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 65
+        "y": 81
       },
       "height": "",
       "hiddenSeries": false,
@@ -5157,7 +5257,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 75
+        "y": 91
       },
       "height": "",
       "hiddenSeries": false,
@@ -5305,7 +5405,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 75
+        "y": 91
       },
       "height": "",
       "hiddenSeries": false,
@@ -5452,7 +5552,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 85
+        "y": 101
       },
       "height": "",
       "hiddenSeries": false,
@@ -5580,7 +5680,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 85
+        "y": 101
       },
       "height": "",
       "hiddenSeries": false,
@@ -5709,7 +5809,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 95
+        "y": 111
       },
       "height": "",
       "hiddenSeries": false,
@@ -5850,7 +5950,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 95
+        "y": 111
       },
       "height": "",
       "hiddenSeries": false,
@@ -5990,7 +6090,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 105
+        "y": 121
       },
       "height": "",
       "hiddenSeries": false,
@@ -6109,7 +6209,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 105
+        "y": 121
       },
       "height": "",
       "hiddenSeries": false,
@@ -6228,7 +6328,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 115
+        "y": 131
       },
       "hiddenSeries": false,
       "id": 46,
@@ -6333,7 +6433,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 115
+        "y": 131
       },
       "hiddenSeries": false,
       "id": 47,
@@ -6438,7 +6538,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 125
+        "y": 141
       },
       "hiddenSeries": false,
       "id": 49,
@@ -6564,7 +6664,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 125
+        "y": 141
       },
       "hiddenSeries": false,
       "id": 50,
@@ -6679,7 +6779,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 135
+        "y": 151
       },
       "id": 8,
       "panels": [],
@@ -6731,7 +6831,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 136
+        "y": 152
       },
       "id": 52,
       "links": [],
@@ -6810,7 +6910,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 136
+        "y": 152
       },
       "id": 55,
       "links": [],
@@ -6889,7 +6989,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 136
+        "y": 152
       },
       "id": 53,
       "links": [],
@@ -6968,7 +7068,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 136
+        "y": 152
       },
       "id": 56,
       "links": [],
@@ -7040,7 +7140,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 140
+        "y": 156
       },
       "hideTimeOverride": false,
       "id": 58,
@@ -7132,7 +7232,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 140
+        "y": 156
       },
       "id": 60,
       "links": [],
@@ -7203,7 +7303,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 140
+        "y": 156
       },
       "hideTimeOverride": false,
       "id": 62,
@@ -7295,7 +7395,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 140
+        "y": 156
       },
       "id": 61,
       "links": [],
@@ -7363,7 +7463,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 144
+        "y": 160
       },
       "hiddenSeries": false,
       "id": 64,
@@ -7567,7 +7667,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 144
+        "y": 160
       },
       "hiddenSeries": false,
       "id": 65,
@@ -7776,7 +7876,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 151
+        "y": 167
       },
       "hiddenSeries": false,
       "id": 68,
@@ -7972,7 +8072,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 151
+        "y": 167
       },
       "hiddenSeries": false,
       "id": 67,
@@ -8146,7 +8246,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 158
+        "y": 174
       },
       "hiddenSeries": false,
       "id": 70,
@@ -8267,7 +8367,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 158
+        "y": 174
       },
       "hiddenSeries": false,
       "id": 71,
@@ -8382,7 +8482,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 168
+        "y": 184
       },
       "hiddenSeries": false,
       "id": 73,
@@ -8542,7 +8642,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 168
+        "y": 184
       },
       "hiddenSeries": false,
       "id": 74,
@@ -8691,7 +8791,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 178
+        "y": 194
       },
       "id": 91,
       "panels": [],
@@ -8728,7 +8828,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 179
+        "y": 195
       },
       "id": 108,
       "interval": null,
@@ -8823,7 +8923,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 179
+        "y": 195
       },
       "id": 110,
       "interval": null,
@@ -8917,7 +9017,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 179
+        "y": 195
       },
       "id": 112,
       "interval": null,
@@ -9011,7 +9111,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 179
+        "y": 195
       },
       "id": 114,
       "interval": "",
@@ -9093,7 +9193,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 182
+        "y": 198
       },
       "hiddenSeries": false,
       "id": 85,
@@ -9191,7 +9291,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 182
+        "y": 198
       },
       "hiddenSeries": false,
       "id": 87,
@@ -9303,7 +9403,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 190
+        "y": 206
       },
       "id": 123,
       "interval": null,
@@ -9398,7 +9498,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 190
+        "y": 206
       },
       "id": 124,
       "interval": null,
@@ -9492,7 +9592,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 190
+        "y": 206
       },
       "id": 125,
       "interval": null,
@@ -9586,7 +9686,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 190
+        "y": 206
       },
       "id": 126,
       "interval": "",
@@ -9668,7 +9768,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 193
+        "y": 209
       },
       "hiddenSeries": false,
       "id": 127,
@@ -9766,7 +9866,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 193
+        "y": 209
       },
       "hiddenSeries": false,
       "id": 128,
@@ -9878,7 +9978,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 201
+        "y": 217
       },
       "id": 136,
       "interval": null,
@@ -9973,7 +10073,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 201
+        "y": 217
       },
       "id": 137,
       "interval": null,
@@ -10067,7 +10167,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 201
+        "y": 217
       },
       "id": 138,
       "interval": null,
@@ -10161,7 +10261,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 201
+        "y": 217
       },
       "id": 139,
       "interval": "",
@@ -10243,7 +10343,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 204
+        "y": 220
       },
       "hiddenSeries": false,
       "id": 140,
@@ -10341,7 +10441,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 204
+        "y": 220
       },
       "hiddenSeries": false,
       "id": 141,
@@ -10441,7 +10541,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 212
+        "y": 228
       },
       "height": "",
       "hiddenSeries": false,
@@ -10569,7 +10669,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 212
+        "y": 228
       },
       "height": "",
       "hiddenSeries": false,
@@ -10698,7 +10798,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 222
+        "y": 238
       },
       "height": "",
       "hiddenSeries": false,
@@ -10825,7 +10925,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 222
+        "y": 238
       },
       "height": "",
       "hiddenSeries": false,
@@ -10952,7 +11052,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 232
+        "y": 248
       },
       "height": "",
       "hiddenSeries": false,
@@ -11069,7 +11169,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 232
+        "y": 248
       },
       "height": "",
       "hiddenSeries": false,
@@ -11186,7 +11286,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 242
+        "y": 258
       },
       "height": "",
       "hiddenSeries": false,
@@ -11318,7 +11418,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 242
+        "y": 258
       },
       "height": "",
       "hiddenSeries": false,
@@ -11449,7 +11549,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 252
+        "y": 268
       },
       "height": "",
       "hiddenSeries": false,
@@ -11596,7 +11696,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 252
+        "y": 268
       },
       "height": "",
       "hiddenSeries": false,
@@ -12326,7 +12426,7 @@
   "timezone": "",
   "title": "DASHTITLE",
   "uid": null,
-  "id":null,
+  "id": null,
   "version": 2
 }
 }

@@ -60,6 +60,10 @@ else:
                             'NAMEIFSWITCHA': str(data['hostA']['switchPort']['ifName']),
                             'NAMEIFSWITCHB': str(data['hostB']['switchPort']['ifName']),
                             'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
+                            'DATAPLANEIPA': str(data['hostA']['interfaceIP']),
+                            'DATAPLANEIPB': str(data['hostB']['interfaceIP']),
+                            'NODENAMEA': str(data['hostA']['nodeName']),
+                            'NODENAMEB': str(data['hostB']['nodeName']),
                             'PORTA': str(data['hostA']['nodeExporterPort']),
                             'PORTB': str(data['hostB']['nodeExporterPort']),
                             'IPSWITCH': str(data['switchData']['target']),
@@ -68,7 +72,7 @@ else:
             print("Creating custom Grafana JSON Dashboard...")
 
             # Iteratively find and replace in one go 
-            with open('template.json') as infile, open('out.json', 'w') as outfile:
+            with open('newTemplate.json') as infile, open('out.json', 'w') as outfile:
                 for line in infile:
                     for src, target in replacements.items():
                         line = line.replace(src, target)

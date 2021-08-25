@@ -8,7 +8,8 @@ prometheusPort: 9090
 hostA:
   IP: 198.32.43.16
   interfaceName: 'ens2.1000'
-  interfaceIP: '10.10.100.1/24'
+  interfaceIP: '10.10.100.1'
+  nodeName: 'sdn-dtn-2-10.ultralight.org'
   vlan: 1000
   nodeExporterPort: 9100
   switchPort: 
@@ -18,7 +19,8 @@ hostA:
 hostB:
   IP: 198.32.43.15
   interfaceName: 'ens2.1000'
-  interfaceIP: '10.10.100.2/24'
+  interfaceIP: '10.10.100.2'
+  nodeName: 'sdn-dtn-2-11.ultralight.org'
   vlan: 1000
   nodeExporterPort: 9100
   switchPort: 
@@ -27,7 +29,7 @@ hostB:
 # Prometheus source specifics
 switchData:
   job_name: 'snmp1'
-   scrapeInterval: 15s
+  scrapeInterval: 15s
   scrapeDuration: 5h
   target: 172.16.1.14
   #if-mib and F10-IF-EXTENSION-MIB

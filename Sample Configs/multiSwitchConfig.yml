@@ -7,8 +7,9 @@ prometheusPort: 9090
 # Host 1 Specifics 
 hostA:
   IP: 198.32.43.16
-  interfaceName: 'ens2d1.1001'
+  interfaceName: 'ens2.1000'
   interfaceIP: '10.10.101.1/24'
+  nodeName: 'sdn-dtn-2-10.ultralight.org'
   vlan: 1001
   nodeExporterPort: 9100
   switchPort: 
@@ -17,8 +18,9 @@ hostA:
 # Host 2 Specifics
 hostB:
   IP: 198.32.43.15
-  interfaceName: 'ens2d1.1001'
+  interfaceName: 'ens2.1000'
   interfaceIP: '10.10.101.2/24'
+  nodeName: 'sdn-dtn-2-11.ultralight.org'
   vlan: 1001
   nodeExporterPort: 9100
   switchPort: 

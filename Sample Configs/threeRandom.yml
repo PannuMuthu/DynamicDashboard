@@ -9,6 +9,7 @@ hostA:
   IP: 198.32.43.15
   interfaceName: 'enp4s0f0'
   interfaceIP: '10.10.101.1/24'
+  nodeName: 'sdn-dtn-2-11.ultralight.org'
   vlan: 3615
   nodeExporterPort: 9100
   switchPort: 
@@ -19,6 +20,7 @@ hostB:
   IP: 198.32.43.16
   interfaceName: 'enp4s0f1'
   interfaceIP: '10.10.101.2/24'
+  nodeName: 'sdn-dtn-2-10.ultralight.org'
   vlan: 3618
   nodeExporterPort: 9100
   switchPort: 

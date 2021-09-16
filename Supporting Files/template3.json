@@ -1,11 +1,11 @@
 {
   "dashboard": {
-    "id": null,
-    "uid": null,
-    "title": "DASHTITLE",
-    "tags": [ "templated" ],
-    "timezone": "browser",
-    "schemaVersion": 16,
+  "id": null,
+  "uid": null,
+  "title": "DASHTITLE",
+  "tags": [ "templated" ],
+  "timezone": "browser",
+  "schemaVersion": 16,
   "annotations": {
     "list": [
       {
@@ -23,8 +23,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 62,
-  "iteration": 1629399737085,
+  "id": 86,
+  "iteration": 1631818713189,
   "links": [
     {
       "asDropdown": false,
@@ -53,6 +53,20 @@
   ],
   "panels": [
     {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 145,
+      "panels": [],
+      "title": "End-to-End Flow Overview",
+      "type": "row"
+    },
+    {
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -77,17 +91,17 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 16,
-        "w": 24,
-        "x": 0,
-        "y": 0
+        "h": 30,
+        "w": 13,
+        "x": 5,
+        "y": 1
       },
       "id": 143,
       "options": {
         "authPassword": "",
         "authUsername": "",
         "composites": [],
-        "content": "graph LR\n      subgraph h1 [\"Host 1\"]\n      style h1 fill:#575757\n      ip{{IP: IPHOSTA}}\n      e(IFNAMEHOSTA)\n      end\n      e(IFNAMEHOSTA) ------- s1if1[NAMEIFAIN]\n\n      subgraph s1 [\"Switch 1\"]\n      style s1 fill:#757575\n      s1ip{{IP: IPSWITCHA}}\n      subgraph if [\"Interfaces\"]\n      s1if2[NAMEIFAOUT]\n      s1if1[NAMEIFAIN]\n      end\n      end\n\n      subgraph s3 [\"Switch 2\"]\n      style s3 fill:#757575\n      s3ip{{IP: IPSWITCHB}}\n      subgraph if3 [\"Interfaces\"]\n      s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT]\n      end\n      end\n\n      subgraph s2 [\"Switch 3\"]\n      style s2 fill:#757575\n      s2ip{{IP: IPSWITCHC}}\n      subgraph if2 [\"Interfaces\"]\n      s2if2[NAMEIFCOUT]\n      s2if1[NAMEIFCIN]\n      end\n      end\n      s1if2[NAMEIFAOUT] ------- s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT] ------- s2if1[NAMEIFCIN]\n      s2if2[NAMEIFCOUT] ------- e2(IFNAMEHOSTB)\n      subgraph h2 [\"Host 2\"]\n      style h2 fill:#575757\n      ip2{{IP: IPHOSTB}}\n      e2(IFNAMEHOSTB)\n      end",
+        "content": "graph TB\n      subgraph h1 [\"Host 1\"]\n      style h1 fill:#575757\n      ip{{IP: IPHOSTA}}\n      e(IFNAMEHOSTA)\n      end\n      e(IFNAMEHOSTA) ------- s1if1[NAMEIFAIN]\n\n      subgraph s1 [\"Switch 1\"]\n      style s1 fill:#757575\n      s1ip{{IP: IPSWITCHA}}\n      subgraph if [\"Interfaces\"]\n      s1if2[NAMEIFAOUT]\n      s1if1[NAMEIFAIN]\n      end\n      end\n\n      subgraph s3 [\"Switch 2\"]\n      style s3 fill:#757575\n      s3ip{{IP: IPSWITCHB}}\n      subgraph if3 [\"Interfaces\"]\n      s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT]\n      end\n      end\n\n      subgraph s2 [\"Switch 3\"]\n      style s2 fill:#757575\n      s2ip{{IP: IPSWITCHC}}\n      subgraph if2 [\"Interfaces\"]\n      s2if2[NAMEIFCOUT]\n      s2if1[NAMEIFCIN]\n      end\n      end\n      s1if2[NAMEIFAOUT] ------- s3if1[NAMEIFBIN]\n      s3if2[NAMEIFBOUT] ------- s2if1[NAMEIFCIN]\n      s2if2[NAMEIFCOUT] ------- e2(IFNAMEHOSTB)\n      subgraph h2 [\"Host 2\"]\n      style h2 fill:#575757\n      ip2{{IP: IPHOSTB}}\n      e2(IFNAMEHOSTB)\n      end",
         "legend": {
           "asTable": true,
           "displayMode": "table",
@@ -98,7 +112,7 @@
           "hideEmpty": false,
           "hideZero": false,
           "placement": "bottom",
-          "show": true,
+          "show": false,
           "sortBy": "last",
           "sortDesc": true,
           "stats": [
@@ -147,129 +161,8 @@
       "pluginVersion": "1.7.3",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Flow Visualization",
-      "transparent": true,
+      "title": "End-to-End Flow Overview",
       "type": "jdbranham-diagram-panel"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 5,
-        "x": 0,
-        "y": 16
-      },
-      "id": 12,
-      "options": {
-        "content": " ",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Host 1",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 5,
-        "x": 5,
-        "y": 16
-      },
-      "id": 13,
-      "options": {
-        "content": " Dell S4810 Switch",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Network Element (Switch 1)",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 5,
-        "x": 10,
-        "y": 16
-      },
-      "id": 116,
-      "options": {
-        "content": " Dell S4810 Switch",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Network Element (Switch 2)",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 5,
-        "x": 15,
-        "y": 16
-      },
-      "id": 129,
-      "options": {
-        "content": " Dell S4810 Switch",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Network Element (Switch 3)",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 4,
-        "x": 20,
-        "y": 16
-      },
-      "id": 14,
-      "options": {
-        "content": "Host 2 ",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Host 2",
-      "transparent": true,
-      "type": "text"
     },
     {
       "collapsed": false,
@@ -278,11 +171,11 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 31
       },
-      "id": 4,
+      "id": 147,
       "panels": [],
-      "title": "Flow Summary",
+      "title": "Flow Summary - Host 1",
       "type": "row"
     },
     {
@@ -293,31 +186,469 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 2,
-        "w": 5,
+        "h": 3,
+        "w": 24,
         "x": 0,
-        "y": 18
+        "y": 32
       },
-      "id": 2,
+      "id": 149,
       "options": {
-        "content": "<center> IPHOSTA </center>",
+        "content": "```\n NODENAMEA   IFNAMEHOSTA   DATAPLANEIPA\n ```",
         "mode": "markdown"
+      },
+      "pluginVersion": "7.5.4",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Host 1 Flow Summary",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 188
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "operstate"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 113
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "machine"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 0
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 151,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
       },
       "pluginVersion": "7.5.4",
       "targets": [
         {
           "exemplar": true,
-          "expr": "",
+          "expr": "node_network_info{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
           "interval": "",
           "legendFormat": "",
           "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_uname_info{instance=\"IPHOSTA:PORTA\",job=\"$Job\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_mtu_bytes{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
-      "type": "text"
+      "title": "Host 1 Information",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "Time"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "broadcast": true,
+              "domainname": true,
+              "duplex": true,
+              "instance": true,
+              "job": true,
+              "name": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value": "MTU",
+              "name": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 188
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "operstate"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 113
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "machine"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Receive Packets"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 153,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.5.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "node_network_receive_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_transmit_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_receive_packets_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_transmit_packets_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "D"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Host 1 Packets, Bytes Receive/Transmit",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "Time"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "__name__": true,
+              "broadcast": true,
+              "domainname": true,
+              "duplex": true,
+              "instance": true,
+              "job": true,
+              "name": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value": "Receive Bytes",
+              "Value #B": "Transmit Bytes",
+              "Value #C": "Receive Packets",
+              "Value #D": "Transmit Packets",
+              "name": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 41
+      },
+      "hiddenSeries": false,
+      "id": 155,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "recv IFNAMEHOSTA.1000",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\", device=\"IFNAMEHOSTA\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{device}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{device}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Host 1 Flow Summary - Bandwidth Graph",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 48
+      },
+      "id": 157,
+      "panels": [],
+      "title": "Flow Summary - Switch 1",
+      "type": "row"
     },
     {
       "datasource": null,
@@ -327,132 +658,20 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 2,
-        "w": 5,
-        "x": 5,
-        "y": 18
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 49
       },
-      "id": 15,
+      "id": 159,
       "options": {
-        "content": "<center> IPSWITCHA </center>",
+        "content": "```\n Switch 1 (DellS4810)   NAMEIFAIN   NAMEIFAOUT   IPSWITCHA\n ```",
         "mode": "markdown"
       },
       "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 5,
-        "x": 10,
-        "y": 18
-      },
-      "id": 117,
-      "options": {
-        "content": "<center> IPSWITCHB </center>",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 5,
-        "x": 15,
-        "y": 18
-      },
-      "id": 130,
-      "options": {
-        "content": "<center> IPSWITCHC </center>",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 4,
-        "x": 20,
-        "y": 18
-      },
-      "id": 16,
-      "options": {
-        "content": "<center> IPHOSTB </center>",
-        "mode": "markdown"
-      },
-      "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "IP Address",
-      "transparent": true,
+      "title": "Switch 1  Flow Summary",
       "type": "text"
     },
     {
@@ -468,9 +687,9 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 52
       },
-      "id": 18,
+      "id": 161,
       "links": [],
       "pageSize": null,
       "scroll": true,
@@ -918,17 +1137,6 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHA\",ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "E"
-        },
-        {
-          "exemplar": true,
           "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"IPSWITCHA\",ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
@@ -937,14 +1145,467 @@
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHA\",ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}) by (ifIndex)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "E"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 1 Interface Status",
+      "title": "Switch 1 Information",
       "transform": "table",
-      "transparent": true,
       "type": "table-old"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ifDescr"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 197
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Receive Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Transmit Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 56
+      },
+      "id": 163,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.5.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\",instance=\"IPSWITCHA\",ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m])*8",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m])*8",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInMulticastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) + irate(ifHCInUcastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) + irate(ifHCInBroadcastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutMulticastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) + irate(ifHCOutUcastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) + irate(ifHCOutBroadcastPkts{job=\"$job\",instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "D"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 1 Packets, Bytes Receive/Transmit",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "ifIndex"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "ifIndex": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value #A": "Receive Bytes",
+              "Value #B": "Transmit Bytes",
+              "Value #C": "Receive Packets",
+              "Value #D": "Transmit Packets",
+              "ifDescr": "Interface"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 60
+      },
+      "hiddenSeries": false,
+      "id": 165,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFAIN",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"IFNAMESWITCHHOSTA\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"IFNAMESWITCHHOSTA\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Switch 1 Flow Summary - Bandwidth Graph - Host 1 Facing Port",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 67
+      },
+      "hiddenSeries": false,
+      "id": 167,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFCOUT",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Switch 1 Flow Summary - Bandwidth Graph - Switch 2 Facing Port",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 74
+      },
+      "id": 169,
+      "panels": [],
+      "title": "Flow Summary - Switch 2",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 75
+      },
+      "id": 171,
+      "options": {
+        "content": "```\n Switch 2 (DellS4810)   NAMEIFBIN   NAMEIFBOUT   IPSWITCHB\n ```",
+        "mode": "markdown"
+      },
+      "pluginVersion": "7.5.4",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 2  Flow Summary",
+      "type": "text"
     },
     {
       "columns": [],
@@ -959,9 +1620,9 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 78
       },
-      "id": 131,
+      "id": 173,
       "links": [],
       "pageSize": null,
       "scroll": true,
@@ -1409,17 +2070,6 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHB\",ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "E"
-        },
-        {
-          "exemplar": true,
           "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"IPSWITCHB\",ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
@@ -1428,14 +2078,467 @@
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHB\",ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}) by (ifIndex)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "E"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 2 Interface Status",
+      "title": "Switch 2 Information",
       "transform": "table",
-      "transparent": true,
       "type": "table-old"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ifDescr"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 197
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Receive Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Transmit Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 82
+      },
+      "id": 175,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.5.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\",instance=\"IPSWITCHB\",ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m])*8",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m])*8",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInMulticastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) + irate(ifHCInUcastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) + irate(ifHCInBroadcastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutMulticastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) + irate(ifHCOutUcastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) + irate(ifHCOutBroadcastPkts{job=\"$job\",instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "D"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 2 Packets, Bytes Receive/Transmit",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "ifIndex"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "ifIndex": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value #A": "Receive Bytes",
+              "Value #B": "Transmit Bytes",
+              "Value #C": "Receive Packets",
+              "Value #D": "Transmit Packets",
+              "ifDescr": "Interface"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 86
+      },
+      "hiddenSeries": false,
+      "id": 177,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFAIN",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Switch 2 Flow Summary - Bandwidth Graph - Switch 1 Facing Port",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 93
+      },
+      "hiddenSeries": false,
+      "id": 179,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFCOUT",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBOUTGOING\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBOUTGOING\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Switch 2 Flow Summary - Bandwidth Graph - Switch 3 Facing Port",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 100
+      },
+      "id": 181,
+      "panels": [],
+      "title": "Flow Summary - Switch 3",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 101
+      },
+      "id": 183,
+      "options": {
+        "content": "```\n Switch 2 (DellS4810)   NAMEIFCIN   NAMEIFCOUT   IPSWITCHC\n ```",
+        "mode": "markdown"
+      },
+      "pluginVersion": "7.5.4",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 3 Flow Summary",
+      "type": "text"
     },
     {
       "columns": [],
@@ -1450,9 +2553,9 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 104
       },
-      "id": 118,
+      "id": 185,
       "links": [],
       "pageSize": null,
       "scroll": true,
@@ -1900,17 +3003,6 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}) by (ifIndex)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "E"
-        },
-        {
-          "exemplar": true,
           "expr": "sum(ifOperStatus{job=~\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}) by (ifIndex)",
           "format": "table",
           "hide": false,
@@ -1919,18 +3011,28 @@
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(ifMtu{job=~\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}) by (ifIndex)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "E"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Switch 3 Interface Status",
+      "title": "Switch 3 Information",
       "transform": "table",
-      "transparent": true,
       "type": "table-old"
     },
     {
-      "datasource": "Prometheus",
-      "description": "MAC Address, Interface Name, Operational Status, MTU Setting",
+      "datasource": null,
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1940,10 +3042,7 @@
             "align": null,
             "filterable": false
           },
-          "decimals": 0,
           "mappings": [],
-          "max": 1,
-          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1957,315 +3056,201 @@
               }
             ]
           },
-          "unit": "string"
+          "unit": "decbytes"
         },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 12,
-        "x": 0,
-        "y": 32
-      },
-      "id": 23,
-      "links": [],
-      "options": {
-        "showHeader": true,
-        "sortBy": [
+        "overrides": [
           {
-            "desc": false,
-            "displayName": "Time"
-          }
-        ]
-      },
-      "pluginVersion": "7.5.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "node_network_info{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=~\"IFNAMEHOSTA\"}",
-          "format": "table",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 4
-        },
-        {
-          "exemplar": true,
-          "expr": "node_network_mtu_bytes{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "legendFormat": "",
-          "refId": "B"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Host 1 Interface Status",
-      "transformations": [
-        {
-          "id": "seriesToColumns",
-          "options": {
-            "byField": "device"
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Time 1": true,
-              "Time 2": true,
-              "Value #A": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "broadcast": true,
-              "duplex": true,
-              "instance 1": true,
-              "instance 2": true,
-              "job 1": true,
-              "job 2": true
+            "matcher": {
+              "id": "byName",
+              "options": "ifDescr"
             },
-            "indexByName": {
-              "Time 1": 1,
-              "Time 2": 11,
-              "Value #A": 10,
-              "Value #B": 4,
-              "__name__ 1": 2,
-              "__name__ 2": 12,
-              "address": 3,
-              "broadcast": 5,
-              "device": 0,
-              "duplex": 6,
-              "instance 1": 7,
-              "instance 2": 13,
-              "job 1": 8,
-              "job 2": 14,
-              "operstate": 9
-            },
-            "renameByName": {
-              "Value #B": "MTU",
-              "address": "Physical Address",
-              "broadcast": "",
-              "device": "Name",
-              "operstate": "Operational State"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": "Prometheus",
-      "description": "MAC Address, Interface Name, Operational Status, MTU Setting",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": null,
-            "filterable": false
-          },
-          "decimals": 0,
-          "mappings": [],
-          "max": 1,
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
+            "properties": [
               {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
+                "id": "custom.width",
+                "value": 197
               }
             ]
           },
-          "unit": "string"
-        },
-        "overrides": []
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Receive Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Transmit Packets"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
-        "w": 12,
-        "x": 12,
-        "y": 32
+        "w": 24,
+        "x": 0,
+        "y": 108
       },
-      "id": 115,
-      "links": [],
+      "id": 187,
       "options": {
+        "frameIndex": 2,
         "showHeader": true,
-        "sortBy": [
-          {
-            "desc": false,
-            "displayName": "Time"
-          }
-        ]
+        "sortBy": []
       },
       "pluginVersion": "7.5.4",
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_network_info{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}",
+          "expr": "irate(ifHCInOctets{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m])*8",
           "format": "table",
+          "hide": false,
           "instant": true,
           "interval": "",
-          "intervalFactor": 1,
           "legendFormat": "",
-          "refId": "A",
-          "step": 4
+          "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "node_network_mtu_bytes{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}",
+          "expr": "irate(ifHCOutOctets{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m])*8",
           "format": "table",
           "hide": false,
           "instant": true,
           "interval": "",
           "legendFormat": "",
           "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCInMulticastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) + irate(ifHCInUcastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) + irate(ifHCInBroadcastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(ifHCOutMulticastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) + irate(ifHCOutUcastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) + irate(ifHCOutBroadcastPkts{job=\"$job\",instance=\"IPSWITCHC\",ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[1m]) ",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "D"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Host 2 Interface Status",
+      "title": "Switch 3 Packets, Bytes Receive/Transmit",
       "transformations": [
         {
           "id": "seriesToColumns",
           "options": {
-            "byField": "device"
+            "byField": "ifIndex"
           }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
         },
         {
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Time 1": true,
-              "Time 2": true,
-              "Value #A": true,
-              "__name__ 1": true,
-              "__name__ 2": true,
-              "broadcast": true,
-              "duplex": true,
-              "instance 1": true,
-              "instance 2": true,
-              "job 1": true,
-              "job 2": true
+              "ifIndex": true,
+              "instance": true,
+              "job": true
             },
-            "indexByName": {
-              "Time 1": 1,
-              "Time 2": 11,
-              "Value #A": 10,
-              "Value #B": 4,
-              "__name__ 1": 2,
-              "__name__ 2": 12,
-              "address": 3,
-              "broadcast": 5,
-              "device": 0,
-              "duplex": 6,
-              "instance 1": 7,
-              "instance 2": 13,
-              "job 1": 8,
-              "job 2": 14,
-              "operstate": 9
-            },
+            "indexByName": {},
             "renameByName": {
-              "Value #B": "MTU",
-              "address": "Physical Address",
-              "broadcast": "",
-              "device": "Name",
-              "operstate": "Operational State"
+              "Value #A": "Receive Bytes",
+              "Value #B": "Transmit Bytes",
+              "Value #C": "Receive Packets",
+              "Value #D": "Transmit Packets",
+              "ifDescr": "Interface"
             }
           }
         }
       ],
-      "transparent": true,
       "type": "table"
     },
     {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
+      "datasource": null,
       "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
+        "defaults": {},
         "overrides": []
       },
-      "fill": 4,
+      "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 11,
-        "w": 5,
+        "h": 7,
+        "w": 24,
         "x": 0,
-        "y": 36
+        "y": 112
       },
       "hiddenSeries": false,
-      "id": 26,
+      "id": 189,
       "legend": {
-        "alignAsTable": false,
         "avg": false,
         "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
         "max": false,
         "min": false,
-        "rightSide": false,
         "show": true,
-        "sort": "current",
-        "sortDesc": true,
         "total": false,
         "values": false
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
       },
       "percentage": false,
       "pluginVersion": "7.5.4",
-      "pointradius": 5,
+      "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFAIN",
           "transform": "negative-Y"
         }
       ],
@@ -2275,2377 +3260,34 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\", device=~\"IFNAMEHOSTA\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "recv {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 1 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 5,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 28,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 1 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "decimals": null,
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 10,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 119,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "decimals": null,
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 15,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 132,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 3 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "decimals": null,
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 4,
-        "x": 20,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 30,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "recv {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 2 Bandwidth In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 0,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "id": 29,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\",device=\"IFNAMEHOSTA\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "trans {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 1 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 5,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "id": 32,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 1 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 10,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "id": 120,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 15,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "id": 133,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 3 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bps"
-        },
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 4,
-        "x": 20,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "id": 31,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}[5m])*8",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "trans {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 2 Bandwidth Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 0,
-        "y": 58
-      },
-      "hiddenSeries": false,
-      "id": 35,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTA:PORTA\",job=\"$Job\", device=\"IFNAMEHOSTA\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "recv {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 1 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 5,
-        "y": 58
-      },
-      "hiddenSeries": false,
-      "id": 33,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "rate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 1 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 10,
-        "y": 58
-      },
-      "hiddenSeries": false,
-      "id": 121,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "rate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 2 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 15,
-        "y": 58
-      },
-      "hiddenSeries": false,
-      "id": 134,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "rate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "in {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 3 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 4,
-        "x": 20,
-        "y": 58
-      },
-      "hiddenSeries": false,
-      "id": 36,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "recv {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 2 Octets In",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 0,
-        "y": 69
-      },
-      "hiddenSeries": false,
-      "id": 37,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTA:PORTA\", device=\"IFNAMEHOSTA\",job=\"$Job\"}[10m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "trans {{device}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Host 1 Octets Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 5,
-        "y": 69
-      },
-      "hiddenSeries": false,
-      "id": 34,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHA\", ifIndex=~\"SWITCHAOUTGOING|IFNAMESWITCHHOSTA\"}[15m])",
-          "format": "time_series",
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING\"}[1m])*8",
           "instant": false,
           "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 1 Octets Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
         },
         {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 10,
-        "y": 69
-      },
-      "hiddenSeries": false,
-      "id": 122,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
           "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHB\", ifIndex=~\"SWITCHBINCOMING|SWITCHBOUTGOING\"}[15m])",
-          "format": "time_series",
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING\"}[1m])*8",
+          "hide": false,
           "instant": false,
           "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Switch 2 Octets Out",
+      "title": "Switch 3 Flow Summary - Bandwidth Graph - Switch 2 Facing Port",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
-      "transparent": true,
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -4656,18 +3298,18 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
           "logBase": 1,
           "max": null,
           "min": null,
           "show": true
         },
         {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
@@ -4680,81 +3322,49 @@
       }
     },
     {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {},
         "overrides": []
       },
-      "fill": 4,
+      "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 11,
-        "w": 5,
-        "x": 15,
-        "y": 69
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 119
       },
       "hiddenSeries": false,
-      "id": 135,
+      "id": 191,
       "legend": {
-        "alignAsTable": false,
         "avg": false,
         "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
         "max": false,
         "min": false,
-        "rightSide": false,
         "show": true,
-        "sort": "current",
-        "sortDesc": true,
         "total": false,
         "values": false
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
       },
       "percentage": false,
       "pluginVersion": "7.5.4",
-      "pointradius": 5,
+      "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:6023",
-          "alias": "/.*out.*/",
+          "$$hashKey": "object:176",
+          "alias": "recv NAMEIFCOUT",
           "transform": "negative-Y"
         }
       ],
@@ -4764,165 +3374,34 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"SWITCHCINCOMING|IFNAMESWITCHHOSTB\"}[15m])",
-          "format": "time_series",
+          "expr": "irate(ifHCInOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"IFNAMESWITCHHOSTB\"}[1m])*8",
           "instant": false,
           "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "out {{ifDescr}}",
-          "refId": "A",
-          "step": 240
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Switch 3 Octets Out",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
+          "intervalFactor": 1,
+          "legendFormat": "recv {{ifDescr}}",
+          "refId": "A"
         },
-        {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Recv_bytes_eth2": "#7EB26D",
-        "Recv_bytes_lo": "#0A50A1",
-        "Recv_drop_eth2": "#6ED0E0",
-        "Recv_drop_lo": "#E0F9D7",
-        "Recv_errs_eth2": "#BF1B00",
-        "Recv_errs_lo": "#CCA300",
-        "Trans_bytes_eth2": "#7EB26D",
-        "Trans_bytes_lo": "#0A50A1",
-        "Trans_drop_eth2": "#6ED0E0",
-        "Trans_drop_lo": "#E0F9D7",
-        "Trans_errs_eth2": "#BF1B00",
-        "Trans_errs_lo": "#CCA300",
-        "recv_bytes_lo": "#0A50A1",
-        "recv_drop_eth0": "#99440A",
-        "recv_drop_lo": "#967302",
-        "recv_errs_eth0": "#BF1B00",
-        "recv_errs_lo": "#890F02",
-        "trans_bytes_eth0": "#7EB26D",
-        "trans_bytes_lo": "#0A50A1",
-        "trans_drop_eth0": "#99440A",
-        "trans_drop_lo": "#967302",
-        "trans_errs_eth0": "#BF1B00",
-        "trans_errs_lo": "#890F02"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 4,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 11,
-        "w": 4,
-        "x": 20,
-        "y": 69
-      },
-      "hiddenSeries": false,
-      "id": 38,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.4",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4255",
-          "alias": "/.*trans.*/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
         {
           "exemplar": true,
-          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}[10m])",
-          "format": "time_series",
+          "expr": "irate(ifHCOutOctets{job=\"$job\", instance=\"IPSWITCHC\", ifIndex=~\"IFNAMESWITCHHOSTB\"}[1m])*8",
+          "hide": false,
+          "instant": false,
           "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "trans {{device}}",
-          "refId": "A",
-          "step": 240
+          "intervalFactor": 1,
+          "legendFormat": "trans {{ifDescr}}",
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Host 2 Octets Out",
+      "title": "Switch 3 Flow Summary - Bandwidth Graph - Host 2 Facing Port",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
-      "transparent": true,
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -4933,18 +3412,18 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:4262",
-          "format": "decbytes",
-          "label": null,
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
           "logBase": 1,
           "max": null,
           "min": null,
           "show": true
         },
         {
-          "$$hashKey": "object:4263",
-          "format": "pps",
-          "label": "",
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
@@ -4963,7 +3442,479 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 80
+        "y": 126
+      },
+      "id": 193,
+      "panels": [],
+      "title": "Flow Summary - Host 2",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 127
+      },
+      "id": 195,
+      "options": {
+        "content": "```\n NODENAMEB   IFNAMEHOSTB   DATAPLANEIPB\n ```",
+        "mode": "markdown"
+      },
+      "pluginVersion": "7.5.4",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Host 2 Flow Summary",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 188
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "operstate"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 113
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "machine"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 0
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 130
+      },
+      "id": 197,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.5.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "node_network_info{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_uname_info{instance=\"IPHOSTB:PORTB\",job=\"$Job\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_mtu_bytes{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Host 2 Information",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "Time"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "broadcast": true,
+              "domainname": true,
+              "duplex": true,
+              "instance": true,
+              "job": true,
+              "name": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value": "MTU",
+              "name": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 188
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "operstate"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 113
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "machine"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Receive Packets"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 133
+      },
+      "id": 199,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.5.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "node_network_receive_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_transmit_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_receive_packets_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "node_network_transmit_packets_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "D"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Host 2 Packets, Bytes Receive/Transmit",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "Time"
+          }
+        },
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "__name__": true,
+              "broadcast": true,
+              "domainname": true,
+              "duplex": true,
+              "instance": true,
+              "job": true,
+              "name": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Value": "Receive Bytes",
+              "Value #B": "Transmit Bytes",
+              "Value #C": "Receive Packets",
+              "Value #D": "Transmit Packets",
+              "name": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 136
+      },
+      "hiddenSeries": false,
+      "id": 201,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "trans IFNAMEHOSTA.1000",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(node_network_receive_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\", device=\"IFNAMEHOSTB\"}[1m])*8",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "recv {{device}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "irate(node_network_transmit_bytes_total{instance=\"IPHOSTB:PORTB\",job=\"$Job\",device=\"IFNAMEHOSTB\"}[1m])*8",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "trans {{device}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Host 2 Flow Summary - Bandwidth Graph",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:118",
+          "format": "Bps",
+          "label": "bw out(-) / in(+)",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:119",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 143
       },
       "id": 6,
       "panels": [],
@@ -4990,7 +3941,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 81
+        "y": 144
       },
       "height": "",
       "hiddenSeries": false,
@@ -5124,7 +4075,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 81
+        "y": 144
       },
       "height": "",
       "hiddenSeries": false,
@@ -5257,7 +4208,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 91
+        "y": 154
       },
       "height": "",
       "hiddenSeries": false,
@@ -5405,7 +4356,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 91
+        "y": 154
       },
       "height": "",
       "hiddenSeries": false,
@@ -5552,7 +4503,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 101
+        "y": 164
       },
       "height": "",
       "hiddenSeries": false,
@@ -5680,7 +4631,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 101
+        "y": 164
       },
       "height": "",
       "hiddenSeries": false,
@@ -5809,7 +4760,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 111
+        "y": 174
       },
       "height": "",
       "hiddenSeries": false,
@@ -5950,7 +4901,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 111
+        "y": 174
       },
       "height": "",
       "hiddenSeries": false,
@@ -6090,7 +5041,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 121
+        "y": 184
       },
       "height": "",
       "hiddenSeries": false,
@@ -6209,7 +5160,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 121
+        "y": 184
       },
       "height": "",
       "hiddenSeries": false,
@@ -6328,7 +5279,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 131
+        "y": 194
       },
       "hiddenSeries": false,
       "id": 46,
@@ -6433,7 +5384,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 131
+        "y": 194
       },
       "hiddenSeries": false,
       "id": 47,
@@ -6538,7 +5489,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 141
+        "y": 204
       },
       "hiddenSeries": false,
       "id": 49,
@@ -6664,7 +5615,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 141
+        "y": 204
       },
       "hiddenSeries": false,
       "id": 50,
@@ -6779,7 +5730,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 151
+        "y": 214
       },
       "id": 8,
       "panels": [],
@@ -6831,7 +5782,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 152
+        "y": 215
       },
       "id": 52,
       "links": [],
@@ -6910,7 +5861,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 152
+        "y": 215
       },
       "id": 55,
       "links": [],
@@ -6989,7 +5940,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 152
+        "y": 215
       },
       "id": 53,
       "links": [],
@@ -7068,7 +6019,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 152
+        "y": 215
       },
       "id": 56,
       "links": [],
@@ -7140,7 +6091,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 156
+        "y": 219
       },
       "hideTimeOverride": false,
       "id": 58,
@@ -7232,7 +6183,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 156
+        "y": 219
       },
       "id": 60,
       "links": [],
@@ -7303,7 +6254,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 156
+        "y": 219
       },
       "hideTimeOverride": false,
       "id": 62,
@@ -7395,7 +6346,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 156
+        "y": 219
       },
       "id": 61,
       "links": [],
@@ -7463,7 +6414,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 160
+        "y": 223
       },
       "hiddenSeries": false,
       "id": 64,
@@ -7667,7 +6618,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 160
+        "y": 223
       },
       "hiddenSeries": false,
       "id": 65,
@@ -7876,7 +6827,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 167
+        "y": 230
       },
       "hiddenSeries": false,
       "id": 68,
@@ -8072,7 +7023,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 167
+        "y": 230
       },
       "hiddenSeries": false,
       "id": 67,
@@ -8246,7 +7197,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 174
+        "y": 237
       },
       "hiddenSeries": false,
       "id": 70,
@@ -8367,7 +7318,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 174
+        "y": 237
       },
       "hiddenSeries": false,
       "id": 71,
@@ -8482,7 +7433,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 184
+        "y": 247
       },
       "hiddenSeries": false,
       "id": 73,
@@ -8642,7 +7593,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 184
+        "y": 247
       },
       "hiddenSeries": false,
       "id": 74,
@@ -8791,7 +7742,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 194
+        "y": 257
       },
       "id": 91,
       "panels": [],
@@ -8828,7 +7779,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 195
+        "y": 258
       },
       "id": 108,
       "interval": null,
@@ -8923,7 +7874,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 195
+        "y": 258
       },
       "id": 110,
       "interval": null,
@@ -9017,7 +7968,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 195
+        "y": 258
       },
       "id": 112,
       "interval": null,
@@ -9111,7 +8062,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 195
+        "y": 258
       },
       "id": 114,
       "interval": "",
@@ -9193,7 +8144,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 198
+        "y": 261
       },
       "hiddenSeries": false,
       "id": 85,
@@ -9291,7 +8242,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 198
+        "y": 261
       },
       "hiddenSeries": false,
       "id": 87,
@@ -9403,7 +8354,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 206
+        "y": 269
       },
       "id": 123,
       "interval": null,
@@ -9498,7 +8449,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 206
+        "y": 269
       },
       "id": 124,
       "interval": null,
@@ -9592,7 +8543,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 206
+        "y": 269
       },
       "id": 125,
       "interval": null,
@@ -9686,7 +8637,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 206
+        "y": 269
       },
       "id": 126,
       "interval": "",
@@ -9768,7 +8719,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 209
+        "y": 272
       },
       "hiddenSeries": false,
       "id": 127,
@@ -9866,7 +8817,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 209
+        "y": 272
       },
       "hiddenSeries": false,
       "id": 128,
@@ -9978,7 +8929,7 @@
         "h": 3,
         "w": 6,
         "x": 0,
-        "y": 217
+        "y": 280
       },
       "id": 136,
       "interval": null,
@@ -10073,7 +9024,7 @@
         "h": 3,
         "w": 6,
         "x": 6,
-        "y": 217
+        "y": 280
       },
       "id": 137,
       "interval": null,
@@ -10167,7 +9118,7 @@
         "h": 3,
         "w": 6,
         "x": 12,
-        "y": 217
+        "y": 280
       },
       "id": 138,
       "interval": null,
@@ -10261,7 +9212,7 @@
         "h": 3,
         "w": 6,
         "x": 18,
-        "y": 217
+        "y": 280
       },
       "id": 139,
       "interval": "",
@@ -10343,7 +9294,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 220
+        "y": 283
       },
       "hiddenSeries": false,
       "id": 140,
@@ -10441,7 +9392,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 220
+        "y": 283
       },
       "hiddenSeries": false,
       "id": 141,
@@ -10541,7 +9492,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 228
+        "y": 291
       },
       "height": "",
       "hiddenSeries": false,
@@ -10669,7 +9620,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 228
+        "y": 291
       },
       "height": "",
       "hiddenSeries": false,
@@ -10798,7 +9749,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 238
+        "y": 301
       },
       "height": "",
       "hiddenSeries": false,
@@ -10925,7 +9876,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 238
+        "y": 301
       },
       "height": "",
       "hiddenSeries": false,
@@ -11052,7 +10003,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 248
+        "y": 311
       },
       "height": "",
       "hiddenSeries": false,
@@ -11169,7 +10120,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 248
+        "y": 311
       },
       "height": "",
       "hiddenSeries": false,
@@ -11286,7 +10237,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 258
+        "y": 321
       },
       "height": "",
       "hiddenSeries": false,
@@ -11418,7 +10369,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 258
+        "y": 321
       },
       "height": "",
       "hiddenSeries": false,
@@ -11549,7 +10500,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 268
+        "y": 331
       },
       "height": "",
       "hiddenSeries": false,
@@ -11696,7 +10647,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 268
+        "y": 331
       },
       "height": "",
       "hiddenSeries": false,

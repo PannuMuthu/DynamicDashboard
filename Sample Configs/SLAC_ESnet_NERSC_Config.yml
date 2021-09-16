@@ -1,0 +1,88 @@
+# Number of switches
+switchNum: 4
+# Grafana Dashboard Title
+dashTitle: "SLAC-ESnet-NERSC Dashboard"
+# Prometheus Port
+prometheusPort: 9090
+# Host 1 Specifics (SLAC DTN End System)
+hostA:
+  IP: '134.79.103.64/24'
+  interfaceName:
+  interfaceIP: 
+  nodeName: 'psexport-servers'
+  vlan: 
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 
+    ifIndex: 
+# Host 2 Specifics (NERSC DTN End System)
+hostB:
+  IP:
+  interfaceName: 
+  interfaceIP: 
+  nodeName: 
+  vlan: 
+  nodeExporterPort: 
+  switchPort: 
+    ifName: 
+    ifIndex: 
+# Switch 1 Specifics (rtr-border1-7k)
+switchDataA:
+  nodeName: 'rtr-border1-7k'
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 6h
+  target: '192.188.37.130/25'
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 
+    ifIndex: 
+  portOut: 
+    ifName: 
+    ifIndex: 
+# Switch 2 Specifics (slac50n-cr6)
+switchDataB: 
+  nodeName: 'slac50n-cr6'
+  job_name: 'snmp2'
+  scrapeInterval: 15s
+  scrapeDuration: 6h
+  target:
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 
+    ifIndex: 
+  portOut: 
+    ifName: 
+    ifIndex: 
+# Switch 3 Specifics (lbnl50-cr6)
+switchDataC: 
+  nodeName: 'lbnl50-cr6'
+  job_name: 'snmp3'
+  scrapeInterval: 15s
+  scrapeDuration: 6h
+  target:
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 
+    ifIndex: 
+  portOut: 
+    ifName: 
+    ifIndex: 
+# Switch 4 Specifics (BR2)
+switchDataD: 
+  nodeName: 'BR2'
+  job_name: 'snmp4'
+  scrapeInterval: 15s
+  scrapeDuration: 6h
+  target: '192.188.37.132/25'
+  # if-mib and F10-IF-EXTENSION-MIB
+  params: [1.3.6.1.2.1.31, 1.3.6.1.4.1.6027.3.11]
+  portIn: 
+    ifName: 
+    ifIndex: 
+  portOut: 
+    ifName: 
+    ifIndex: 

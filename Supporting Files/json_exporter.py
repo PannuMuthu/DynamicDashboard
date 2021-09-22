@@ -9,7 +9,8 @@ class JsonCollector(object):
     self._endpoint = endpoint
   def collect(self):
     # Fetch the JSON
-    response = json.loads(requests.get(self._endpoint).content.decode('UTF-8'))
+    f = open(sys.argv[2])
+    response = json.load(f)
 
     # Convert requests and duration to a summary in seconds
     metric = Metric('abc_requests_duration_seconds',

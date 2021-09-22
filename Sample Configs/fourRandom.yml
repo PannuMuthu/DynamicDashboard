@@ -1,0 +1,84 @@
+# Number of switches
+switchNum: 4
+# Grafana Dashboard Title
+dashTitle: "Random Four Network Element Dashboard"
+# Prometheus Port
+prometheusPort: 9090
+# Host 1 Specifics 
+hostA:
+  IP: 198.32.43.15
+  interfaceName: 'enp4s0f0'
+  interfaceIP: '10.10.255.255/31'
+  nodeName: 'random_nodename_01.ultralight.org'
+  vlan: 3602
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/43'
+    ifIndex: 1054084
+# Host 2 Specifics
+hostB:
+  IP: 198.32.43.15
+  interfaceName: 'enp4s0f1'
+  interfaceIP: '10.10.255.254/31'
+  nodeName: 'random_nodename_02.ultralight.org'
+  vlan: 3601
+  nodeExporterPort: 9100
+  switchPort: 
+    ifName: 'TenGigabitEthernet 0/42'
+    ifIndex: 1053956
+# Switch 1 Specifics
+switchDataA:
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 1.1.1.1
+  # if-mib
+  params: [1.3.6.1.2.1.31]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/43'
+    ifIndex: 1054084
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/8'
+    ifIndex: 1049604
+# Switch 2 Specifics
+switchDataB:
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 2.2.2.2
+  # if-mib
+  params: [1.3.6.1.2.1.31]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/33'
+    ifIndex: 1052804
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/34'
+    ifIndex: 1052932
+# Switch 3 Specifics
+switchDataC: 
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 3.3.3.3
+    # if-mib
+  params: [1.3.6.1.2.1.31]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/11'
+    ifIndex: 1049988
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/12'
+    ifIndex: 1050116
+# Switch 4 Specifics
+switchDataD: 
+  job_name: 'snmp1'
+  scrapeInterval: 15s
+  scrapeDuration: 5h
+  target: 172.16.1.14
+    # if-mib
+  params: [1.3.6.1.2.1.31]
+  portIn: 
+    ifName: 'TenGigabitEthernet 0/9'
+    ifIndex: 1049732
+  portOut: 
+    ifName: 'TenGigabitEthernet 0/42'
+    ifIndex: 1053956

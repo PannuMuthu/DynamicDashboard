@@ -138,7 +138,7 @@ else:
                                 'IPSWITCHB': str(data['switchDataB']['target']),
                                 'SNMPNAME': str(data['switchDataA']['job_name']),
                                 'DASHTITLE':str(data['dashTitle']) + timeTxt}
-            else:
+            elif data['switchNum'] == 3:
                 replacements = {'IPHOSTA': str(data['hostA']['IP']), 
                                 'IPHOSTB': str(data['hostB']['IP']),
                                 'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
@@ -164,6 +164,39 @@ else:
                                 'IPSWITCHA': str(data['switchDataA']['target']),
                                 'IPSWITCHB': str(data['switchDataB']['target']),
                                 'IPSWITCHC': str(data['switchDataC']['target']),
+                                'SNMPNAME': str(data['switchDataA']['job_name']),
+                                'DASHTITLE':str(data['dashTitle']) + timeTxt}
+            else:
+                replacements = {'IPHOSTA': str(data['hostA']['IP']), 
+                                'IPHOSTB': str(data['hostB']['IP']),
+                                'IFNAMEHOSTA': str(data['hostA']['interfaceName']),
+                                'IFNAMEHOSTB': str(data['hostB']['interfaceName']),
+                                'IFNAMESWITCHHOSTA': str(data['hostA']['switchPort']['ifIndex']),
+                                'SWITCHAOUTGOING': str(data['switchDataA']['portOut']['ifIndex']),
+                                'SWITCHBINCOMING': str(data['switchDataB']['portIn']['ifIndex']),
+                                'SWITCHBOUTGOING': str(data['switchDataB']['portOut']['ifIndex']),
+                                'SWITCHCINCOMING': str(data['switchDataC']['portIn']['ifIndex']),
+                                'SWITCHCOUTGOING': str(data['switchDataC']['portOut']['ifIndex']),
+                                'SWITCHDINCOMING': str(data['switchDataD']['portIn']['ifIndex']),
+                                'IFNAMESWITCHHOSTB': str(data['hostB']['switchPort']['ifIndex']),
+                                'NAMEIFAIN': str(data['switchDataA']['portIn']['ifName']),
+                                'NAMEIFAOUT': str(data['switchDataA']['portOut']['ifName']),
+                                'NAMEIFBIN': str(data['switchDataB']['portIn']['ifName']),
+                                'NAMEIFBOUT': str(data['switchDataB']['portOut']['ifName']),
+                                'NAMEIFCIN': str(data['switchDataC']['portIn']['ifName']),
+                                'NAMEIFCOUT': str(data['switchDataC']['portOut']['ifName']),
+                                'NAMEIFDIN': str(data['switchDataD']['portIn']['ifName']),
+                                'NAMEIFDOUT': str(data['switchDataD']['portOut']['ifName']),
+                                'DATAPLANEIPA': str(data['hostA']['interfaceIP']),
+                                'DATAPLANEIPB': str(data['hostB']['interfaceIP']),
+                                'NODENAMEA': str(data['hostA']['nodeName']),
+                                'NODENAMEB': str(data['hostB']['nodeName']),
+                                'PORTA': str(data['hostA']['nodeExporterPort']),
+                                'PORTB': str(data['hostB']['nodeExporterPort']),
+                                'IPSWITCHA': str(data['switchDataA']['target']),
+                                'IPSWITCHB': str(data['switchDataB']['target']),
+                                'IPSWITCHC': str(data['switchDataC']['target']),
+                                'IPSWITCHD': str(data['switchDataD']['target']),
                                 'SNMPNAME': str(data['switchDataA']['job_name']),
                                 'DASHTITLE':str(data['dashTitle']) + timeTxt}
             print("Creating custom Grafana JSON Dashboard...")

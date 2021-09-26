@@ -3,17 +3,17 @@ switchData:
   scrapeInterval: 15s
   scrapeDuration: 5h
   timeOutDuration: 5s
-  target: 172.16.1.14
+  target: 192.188.37.132
   # if-mib
   params: [1.3.6.1.2.1.31]
   # Community Read string
   communityString: 'test'
   portIn: 
-    ifName: 'TenGigabitEthernet 0/43'
-    ifIndex: 1054084
+    ifName: 
+    ifIndex: 
   portOut: 
-    ifName: 'TenGigabitEthernet 0/8'
-    ifIndex: 1049604
+    ifName: 
+    ifIndex: 
   snmpGeneratorPath: '/root/go/src/github.com/prometheus/snmp_exporter/generator'
   snmpExporterPath: '/usr/local/bin/snmp_exporter'
   dynamicDashboardPath: '/root/DynamicDashboard'

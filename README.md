@@ -25,26 +25,21 @@ The SNMP Update script leverages the functionality from the SNMP Exporter Genera
 ### Required Supporting Files
  - ```template.json```, ```template2.json```, ```template3.json```, ```template4.json```
  - ```GRAFANA_CONFIG.yml```
- - ```api.py```
 
 ### Output Files 
- - ```generator.yml```
- - ```snmp.yml```
+ - ```out.json```
 
-The Grafana Dashboard Script uses one of the dashboard templates (```template.json```, ```template2.json```, ```template3.json```, or ```template4.json```) based on the number of network elements defined in the config file to generate a JSON file of the Grafana Dashboard. 
+The Grafana Dashboard Script uses one of the dashboard templates (```template.json```, ```template2.json```, ```template3.json```, or ```template4.json```) based on the number of network elements defined in the config file to generate a JSON file of the Grafana Dashboard. The script then fills in the user-defined information of the flow using the config file parameters to create a JSON Grafana dashboard (```out.json```) file. The script then uses the Grafana API to automatically load the JSON dashboard to the specified running Grafana server. 
 
-## Python Script
-The script that performs the dynamic dashboard generation is ```dynamic.py```. The python script takes in one argument via the command line of a config file containing the necessary details for dashboard generation. 
+### Python Script Usage
+Both of the scripts that perform the SNMP update and dynamic dashboard generation take in one argument via the command line of a config file containing the necessary details for dashboard generation. 
 
-**Usage:** ```python dynamic.py <config_file>```
+**Usage:** 
+- ```python3 snmpUpdate.py <config_file>```
+- ```python3 grafanaDashboard.py <config_file>```
 
-The output of the Python script is two files: 
-- The Grafana Dashboard in JSON format (the script automatically also loads this into the Grafana server, but we provide the raw JSON as well): ```out.json```
-- The Custom SNMP Config File which polls only the specific OIDs of the specific interfaces of the network elements described in the config file (as of now, must be manually loaded into the SNMP Exporter systemd service): ```snmp.yml```
-
-
+The help option can provide additional guidance on running either script (```python3 snmpUpdate.py -h``` or ```python3 grafanaDashboard.py -h```). 
 ## Config File
-In this repository, there are multiple sample config files (```bottomFlowConfig.yml```, ```multiRandom.yml```, ```multiSwitchConfig.yml```, ```randomConfig.yml```, ```threeSwitchConfig.yml```, ```topFlowConfig.yml```, ```threeRandom.yml```). 
 The config files contain the following information: 
 - Host Information:
   - Host IP Address
@@ -59,13 +54,5 @@ The config files contain the following information:
   - Network Element Interface In/Out Name & IP
   - Network Element SNMP Exporter OIDs
 
-## Supporting Files
-In order for the Python script to run, it utilizes a set of templating files as supporting files. Ensure that the following files are within the same directory of ```dynamic.py``` when running the script:
-  - ```generator.yml```
-  - ```generatorTemplate.yml```
-  - ```template.json```
-  - ```template2.json```
-  - ```template3.json```
-  - ```api.py```
 
 

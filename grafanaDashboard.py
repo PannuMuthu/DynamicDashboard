@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import yaml
+import requests 
+import json
 import sys
 import fileinput
 import subprocess
@@ -60,7 +62,22 @@ else:
             print("Applying dashboard JSON to Grafana API...")
             # Run the API script to convert output JSON to Grafana dashboard automatically
             print("Loading Grafana dashboard on Grafana server...")
-            subprocess.run("sudo python3 api.py out.json", shell=True)
+            # Change to Grafana Server location
+            server = "http://198.32.43.16:3000"
+            # Get Default Home Dashboard
+            url = server + "/api/dashboards/db"
+            # HTTP Post Header
+
+            # Change to your Grafana API Key Value pair
+            headers = {"Authorization": "Bearer eyJrIjoia1Y2QXFjZU9CbW1yZ2dRUUFYYVdrR3JZRXVVcFBZcTAiLCJuIjoiYWRtaW4iLCJpZCI6MX0=",
+            "Content-Type": "application/json",
+            "Accept": "application/json"}
+            # Open and load out.json input
+            f = open('out.json',)
+            x = json.load(f)
+            # HTTP Post Request
+            r = requests.post(url=url, headers=headers, data=json.dumps(x), verify=False)
+            print(r.json())
             print("Loaded Grafana dashboard")
         else:
             print("Multiple Network Element Flow Detected")
@@ -173,7 +190,21 @@ else:
             print("Applying dashboard JSON to Grafana API...")
             # Run the API script to convert output JSON to Grafana dashboard automatically
             print("Loading Grafana dashboard on Grafana server...")
-            subprocess.run("sudo python3 api.py out.json", shell=True)
+            # Change to Grafana Server location
+            server = "http://198.32.43.16:3000"
+            # Get Default Home Dashboard
+            url = server + "/api/dashboards/db"
+
+            # Change to your Grafana API Key Value pair
+            headers = {"Authorization": "Bearer eyJrIjoia1Y2QXFjZU9CbW1yZ2dRUUFYYVdrR3JZRXVVcFBZcTAiLCJuIjoiYWRtaW4iLCJpZCI6MX0=",
+            "Content-Type": "application/json",
+            "Accept": "application/json"}
+            # Open and load out.json input
+            f = open('out.json',)
+            x = json.load(f)
+            # HTTP Post Request
+            r = requests.post(url=url, headers=headers, data=json.dumps(x), verify=False)
+            print(r.json())
             print("Loaded Grafana dashboard")
     except KeyboardInterrupt:
         print("Interrupt detected")

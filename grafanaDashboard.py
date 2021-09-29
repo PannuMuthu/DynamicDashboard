@@ -69,7 +69,7 @@ else:
             # HTTP Post Header
 
             # Change to your Grafana API Key Value pair
-            headers = {"Authorization": "Bearer eyJrIjoia1Y2QXFjZU9CbW1yZ2dRUUFYYVdrR3JZRXVVcFBZcTAiLCJuIjoiYWRtaW4iLCJpZCI6MX0=",
+            headers = {"Authorization": GRAFANA_API_KEY,
             "Content-Type": "application/json",
             "Accept": "application/json"}
             # Open and load out.json input
@@ -196,7 +196,7 @@ else:
             url = server + "/api/dashboards/db"
 
             # Change to your Grafana API Key Value pair
-            headers = {"Authorization": "Bearer eyJrIjoia1Y2QXFjZU9CbW1yZ2dRUUFYYVdrR3JZRXVVcFBZcTAiLCJuIjoiYWRtaW4iLCJpZCI6MX0=",
+            headers = {"Authorization": GRAFANA_API_KEY,
             "Content-Type": "application/json",
             "Accept": "application/json"}
             # Open and load out.json input

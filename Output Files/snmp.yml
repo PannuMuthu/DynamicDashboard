@@ -1370,4 +1370,5 @@ module_name:
   retries: 3
   timeout: 5s
   auth:
-    community: mgmt_hep
+    # Replace with your network element's community read string
+    community: SNMP_COMMUNITY_STRING

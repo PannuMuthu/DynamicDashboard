@@ -54,5 +54,7 @@ The config files contain the following information:
   - Network Element Interface In/Out Name & IP
   - Network Element SNMP Exporter OIDs
 
+***GRAFANA_API_KEY*** is a placeholder variable that should be replaced with your Grafana API authentication token. 
+***SNMP_COMMUNITY_STRING*** is a placeholder variable that should be replaced with your network element's community read string.
 
 

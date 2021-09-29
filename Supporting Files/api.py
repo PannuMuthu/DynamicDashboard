@@ -8,6 +8,7 @@ server = "http://198.32.43.16:3000"
 # Get Default Home Dashboard
 url = server + "/api/dashboards/db"
 # HTTP Post Header
+# Replace with your Grafana API key
 headers = {"Authorization": GRAFANA_API_KEY,
             "Content-Type": "application/json",
             "Accept": "application/json"}

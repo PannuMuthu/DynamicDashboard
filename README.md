@@ -43,3 +43,6 @@ In order for the Python script to run, it utilizes a set of templating files as 
   - ```template2.json```
   - ```template3.json```
   - ```api.py```
+
+***GRAFANA_API_KEY*** is a placeholder variable that should be replaced with your Grafana API authentication token. 
+***SNMP_COMMUNITY_STRING*** is a placeholder variable that should be replaced with your network element's community read string.

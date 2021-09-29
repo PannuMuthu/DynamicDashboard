@@ -8,7 +8,7 @@ server = "http://198.32.43.16:3000"
 # Get Default Home Dashboard
 url = server + "/api/dashboards/db"
 # HTTP Post Header
-headers = {"Authorization": "Bearer eyJrIjoia1Y2QXFjZU9CbW1yZ2dRUUFYYVdrR3JZRXVVcFBZcTAiLCJuIjoiYWRtaW4iLCJpZCI6MX0=",
+headers = {"Authorization": GRAFANA_API_KEY,
             "Content-Type": "application/json",
             "Accept": "application/json"}
 # Open and load out.json input

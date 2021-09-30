@@ -20,7 +20,7 @@ The SNMP Update script leverages the functionality from the SNMP Exporter Genera
 
 ## Grafana Dashboard Script (```grafanaDashboard.py```)
 
-```grafana Dashboard.py``` dynamically creates a Grafana dashboard visualizing various aspects of the end-to-end data flow using parameters from the user-defined config file description of the flow (```GRAFANA_CONFIG.yml```). 
+```grafanaDashboard.py``` dynamically creates a Grafana dashboard visualizing various aspects of the end-to-end data flow using parameters from the user-defined config file description of the flow (```GRAFANA_CONFIG.yml```). 
 
 ### Required Supporting Files
  - ```template.json```, ```template2.json```, ```template3.json```, ```template4.json```

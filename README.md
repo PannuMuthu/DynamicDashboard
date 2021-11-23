@@ -8,6 +8,7 @@ The custom script has the following functionalities:
 - Dynamically constructing an SNMP Exporter config file to poll fine-grained OIDs from specific interfaces as specified in the config file
 - Automatically turning on/off SNMP Exporter for specific scrape times and durations specified in config file through the SNMP Config File
 - Automatically loading JSON files to Grafana via Dashboard HTTP API
+- Dynamically generating Prometheus, Grafana, Pushgateway, Node Exporter, and SNMP Exporter Docker containers from base images within the script
 
 ## Python Script
 The script that performs the dynamic dashboard generation is ```dynamic.py```. The python script takes in one argument via the command line of a config file containing the necessary details for dashboard generation. 
@@ -46,3 +47,11 @@ In order for the Python script to run, it utilizes a set of templating files as 
 
 ***GRAFANA_API_KEY*** is a placeholder variable that should be replaced with your Grafana API authentication token. 
 ***SNMP_COMMUNITY_STRING*** is a placeholder variable that should be replaced with your network element's community read string.
+
+## Installation
+
+**Step 1:**
+Download this repository in a directory with root access (preferrably within the root directory):
+```git clone https://github.com/PannuMuthu/DynamicDashboard```
+
+**Step 2: ** Configure Grafana as a Docker container.

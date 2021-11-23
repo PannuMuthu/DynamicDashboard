@@ -48,10 +48,24 @@ In order for the Python script to run, it utilizes a set of templating files as 
 ***GRAFANA_API_KEY*** is a placeholder variable that should be replaced with your Grafana API authentication token. 
 ***SNMP_COMMUNITY_STRING*** is a placeholder variable that should be replaced with your network element's community read string.
 
-## Installation
+## Configuration
 
 **Step 1:**
 Download this repository in a directory with root access (preferrably within the root directory):
-```git clone https://github.com/PannuMuthu/DynamicDashboard```
+- ```git clone https://github.com/PannuMuthu/DynamicDashboard```
 
-**Step 2: ** Configure Grafana as a Docker container.
+**Step 2:** Configure Grafana as a Docker container. Since the dynamic dashboard script relies on the Grafana API, we must manually generate an API key to provide the script. For all other polling software (Prometheus, Pushgateway, Node Exporter, SNMP Exporter), the script will automatically generate the containers through the base image CLI commands.
+- ```docker run -d   -p 3000:3000   -e "GF_INSTALL_PLUGINS=jdbranham-diagram-panel"   grafana/grafana```
+Ensure the docker container is running and keep track of the container ID: 
+- ```docker ps```
+Now, through either an SSH tunnel or an alternative, navigate to ```http://localhost:3000``` and login to Grafana with the default authentication (username: admin, password: admin). Add Prometheus as a datasource (https://grafana.com/docs/grafana/v7.5/datasources/add-a-data-source/?utm_source=grafana_gettingstarted) by setting the URL to ```http://localhost:9090``` and the Access to ```Browser```. 
+Finally, generate an API key by navigating to the API Keys tab within Grafana and generating a new API key with ```admin``` access and no expiration date. Save the API token value which starts with ```Bearer ...```. 
+
+**Step 3: Configure Scripts**
+Navigate to the ```api.py``` script within the DynamicDashboard directory and replace the ```GRAFANA_API_KEY``` placeholder with the Grafana API key saved in the previous step. Additionally, navigate to the ```generatorTemplate.yml``` file within the DynamicDashboard directory and replace the ```SNMP_COMMUNITY_STRING``` placeholder with the SNMP community read string. 
+
+## Execution
+
+Assuming the Dynamic Dashboard scripts have been configured, run the scripts by issuing the following command:
+- ```python dynamic.py <config_file>```
+where ```<config_file>``` is the user-generated config file detailing the configuration parameters of the flow we wish to visualize. Examples of sample config file formats are located within the ```Sample Configs``` directory. 

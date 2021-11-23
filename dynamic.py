@@ -12,6 +12,12 @@ if len(sys.argv) <= 1 or str(sys.argv[1]) == "-h" or str(sys.argv[1]) == "-H":
         print("\n USAGE: python3 dynamic.py <config-file> \n \n Tip: Ensure that the Python script dynamic.py, the supporting files, and the config file are in one directory without subdirectories or other hierarchies.\n")
 else: 
     try:
+        print("Initializing docker containers...")
+        subprocess.run("docker stop $(docker ps -aq)", shell=True)
+        subprocess.run("docker start 6f2a70ea7015", shell=True)
+        subprocess.run("sudo docker run -d  -p 9090:9090     -v /root/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml     prom/prometheus", shell=True)
+        subprocess.run("sudo docker run -d -p 9091:9091 prom/pushgateway", shell=True)
+        subprocess.run("docker run -d --net=\"host\" --pid=\"host\" -v \"/:/host:ro,rslave\" quay.io/prometheus/node-exporter:latest --path.rootfs=/host", shell=True)
         print("Starting script...")
         # Help Command
         # Get current time stamp
@@ -50,7 +56,8 @@ else:
             subprocess.run("./generator generate", shell=True)
             subprocess.run("sudo cp snmp.yml /root/DynamicDashboard", shell=True)
             os.chdir('/root/DynamicDashboard')
-            print("Restarting SNMP Exporter instance with custom SNMP config file...")
+            subprocess.run("sudo docker run -d -p 9116:9116     -v /root/DynamicDashboard/snmp.yml:/etc/snmp_exporter/snmp.yml prom/snmp-exporter", shell=True)
+            print("Initializing docker container with custom SNMP exporter...")
             # Map of replacements to complete from template.json to out.json
             replacements = {'IPHOSTA': str(data['hostA']['IP']), 
                             'IPHOSTB': str(data['hostB']['IP']),
@@ -112,7 +119,8 @@ else:
             subprocess.run("./generator generate", shell=True)
             subprocess.run("sudo cp snmp.yml /root/DynamicDashboard", shell=True)
             os.chdir('/root/DynamicDashboard')
-            print("Restarting SNMP Exporter instance with custom SNMP config file...")
+            subprocess.run("sudo docker run -d -p 9116:9116     -v /root/DynamicDashboard/snmp.yml:/etc/snmp_exporter/snmp.yml prom/snmp-exporter", shell=True)
+            print("Initializing docker container with custom SNMP exporter...")
             # Map of replacements to complete from template.json to out.json
             replacements = {}
             if data['switchNum'] == 2:

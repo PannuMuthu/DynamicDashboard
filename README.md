@@ -55,7 +55,7 @@ Download this repository in a directory with root access (preferrably within the
 - ```git clone https://github.com/PannuMuthu/DynamicDashboard```
 
 **Step 2:** Configure Grafana as a Docker container. Since the dynamic dashboard script relies on the Grafana API, we must manually generate an API key to provide the script. For all other polling software (Prometheus, Pushgateway, Node Exporter, SNMP Exporter), the script will automatically generate the containers through the base image CLI commands.
-- ```docker run -d   -p 3000:3000   -e "GF_INSTALL_PLUGINS=jdbranham-diagram-panel"   grafana/grafana```
+- ```docker run -d  --name grafana -p 3000:3000   -e "GF_INSTALL_PLUGINS=jdbranham-diagram-panel"   grafana/grafana```
 Ensure the docker container is running and keep track of the container ID: 
 - ```docker ps```
 Now, through either an SSH tunnel or an alternative, navigate to ```http://localhost:3000``` and login to Grafana with the default authentication (username: admin, password: admin). Add Prometheus as a datasource (https://grafana.com/docs/grafana/v7.5/datasources/add-a-data-source/?utm_source=grafana_gettingstarted) by setting the URL to ```http://localhost:9090``` and the Access to ```Browser```. 
